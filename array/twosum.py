@@ -28,12 +28,27 @@
 # Only one valid answer exists.
  
   
-def twoSum(nums, target):
-        hash_map = {}
-        for index, num in enumerate(nums):
-            complement = target - num
-            if complement in hash_map:
-                return [hash_map[complement], index]
-            hash_map[num] = index
-        return []
-    
+# def twoSum(nums, target):
+#         hash_map = {}
+#         for index, num in enumerate(nums):
+#             complement = target - num
+#             if complement in hash_map:
+#                 return [hash_map[complement], index]
+#             hash_map[num] = index
+#         return []
+
+
+def twosum(arr,target):
+    n=len(arr)
+    left=0
+    right= n-1
+    arr1=sorted(arr)
+    while left<right:
+        sum=arr1[left]+arr1[right]
+        if sum==target:
+            return "Yes"
+        elif sum<target:
+            left+=1
+        else:
+            right-=1
+    return "no"
