@@ -15,20 +15,30 @@
 
 def rearrange(arr):
     n=len(arr)
-    ans=[0]*n
-    pindex=0
-    nindex=1
+    neg=[]
+    pos=[]
     for i in range(n):
         if arr[i]<0:
-            if nindex < n:
-                ans[nindex] = arr[i]
-                nindex+=2
+            neg.append(arr[i])
         else:
-            if pindex < n:
-                ans[pindex] = arr[i]
-                pindex+=2
-    return ans
-
+            pos.append(arr[i])
+    if len(pos)>len(neg):
+        for i in range(len(neg)):
+            arr[2*i]=pos[i]
+            arr[2*i+1]=neg[i]
+        index=len(neg)*2
+        for i in range(len(neg),len(pos)):
+            arr[index]=pos[i]
+            index+=1
+    else:
+        for i in range(len(pos)):
+            arr[2*i]=pos[i]
+            arr[2*i+1]=neg[i]
+        index=len(pos)*2
+        for i in range(len(pos),len(neg)):
+            arr[index]=neg[i]
+            index+=1
+    return arr
 arr=[3,-2,4,5,9,-4,-1,-8]
 result=rearrange(arr)
 print(result)
