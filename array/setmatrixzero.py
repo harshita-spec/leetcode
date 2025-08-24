@@ -14,7 +14,7 @@
 def zeroMatrix(matrix, n, m):
     # int row[n] = {0}; --> matrix[..][0]
     # int col[m] = {0}; --> matrix[0][..]
-
+    
     col0 = 1
     # step 1: Traverse the matrix and
     # mark 1st row & col accordingly:
@@ -48,15 +48,12 @@ def zeroMatrix(matrix, n, m):
 
     return matrix
 
-
-if __name__ == "__main__":
-	matrix = [[1, 1, 1], [1, 0, 1], [1, 1, 1]]
-	n = len(matrix)
-	m = len(matrix[0])
-	ans = zeroMatrix(matrix, n, m)
-
-	print("The Final matrix is:")
-	for row in ans:
-	    for ele in row:
-	        print(ele, end=" ")
-	    print()
+matrix = [[1, 1, 1], [1, 0, 1], [1, 1, 1]]
+n = len(matrix)
+m = len(matrix[0])
+ans = zeroMatrix(matrix, n, m)
+print("The Final matrix is:")
+for row in ans:
+	for ele in row:
+	    print(ele, end=" ")
+print()	
