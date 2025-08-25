@@ -21,8 +21,8 @@
 
 def Spiral(mat):
     ans = []
-    n = len(mat) # no. of rows
-    m = len(mat[0]) # no. of columns
+    n = len(mat) 
+    m = len(mat[0]) 
     top = 0
     left = 0
     bottom = n - 1
