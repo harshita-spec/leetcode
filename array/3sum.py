@@ -48,7 +48,7 @@ def sum(arr):
             elif sum>0:
                 k-=1
             else:
-                temp=(arr[i],arr[j],arr[k])
+                temp=[arr[i],arr[j],arr[k]]
                 ans.append(temp)
                 j+=1
                 k-=1
