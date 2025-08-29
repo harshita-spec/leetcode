@@ -21,6 +21,6 @@ def merged(arr):
         else:
             ans[-1][1]=max(ans[-1][1],arr[i][1])
     return ans
-arr=[[5,7],[1,3],[4,6],[8,10]]
+arr=[[1,5],[3,6],[8,10],[15,18]]
 result=merged(arr)
 print(result)
