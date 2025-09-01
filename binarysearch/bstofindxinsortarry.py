@@ -13,7 +13,7 @@ def binary(arr,target):
     n=len(arr)
     low=0
     high=n-1
-    while low<high:
+    while low<=high:
         mid=(low+high)//2
         if arr[mid]==target:
             return mid
@@ -22,7 +22,7 @@ def binary(arr,target):
         else:
             low=mid+1
     return -1
-arr=[3,4,6,7,9,12,16,17]
-target=7
+arr=[-1,0,3,5,9,12]
+target=3
 result=binary(arr,target)
 print(result)
