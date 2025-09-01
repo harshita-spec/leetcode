@@ -9,20 +9,33 @@
 # Output: -1
 # Explanation: The target integer 2 does not exist in nums so return -1
 
-def binary(arr,target):
-    n=len(arr)
-    low=0
-    high=n-1
-    while low<=high:
-        mid=(low+high)//2
-        if arr[mid]==target:
-            return mid
-        elif arr[mid]>target:
-            high=mid-1
-        else:
-            low=mid+1
-    return -1
+# def binary(arr,target):
+#     n=len(arr)
+#     low=0
+#     high=n-1
+#     while low<=high:
+#         mid=(low+high)//2
+#         if arr[mid]==target:
+#             return mid
+#         elif arr[mid]>target:
+#             high=mid-1
+#         else:
+#             low=mid+1
+#     return -1
+def binary(arr,low,high,target):
+    if low>high:
+        return -1
+    mid=(low+high)//2
+    if arr[mid]==target:
+        return mid
+    elif arr[mid]<target:
+        return binary(arr,mid+1,high,target)
+    else:
+        return binary(arr,low,mid-1,target)
+  
 arr=[-1,0,3,5,9,12]
+low=0
+high=len(arr)-1
 target=3
-result=binary(arr,target)
+result=binary(arr,low,high,target)
 print(result)
