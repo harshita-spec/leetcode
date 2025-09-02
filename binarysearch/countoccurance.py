@@ -1,13 +1,15 @@
-# First and last occurrence
+# Count Occurrences in a Sorted Array
 
-# Given an array of integers nums sorted in non-decreasing order, find the starting and ending position of a given target value. If the target is not found in the array, return [-1, -1].
+# You are given a sorted array of integers arr and an integer target. Your task is to determine how many times target appears in arr.
+
+# Return the count of occurrences of target in the array.
 # Examples:
-# Input: nums = [5, 7, 7, 8, 8, 10], target = 8
-# Output: [3, 4]
-# Explanation:The target is 8, and it appears in the array at indices 3 and 4, so the output is [3,4]
-# Input: nums = [5, 7, 7, 8, 8, 10], target = 6
-# Output: [-1, -1]
-# Expalantion: The target is 6, which is not present in the array. Therefore, the output is [-1, -1].
+# Input: arr = [0, 0, 1, 1, 1, 2, 3], target = 1
+# Output: 3
+# Explanation: The number 1 appears 3 times in the array.
+# Input: arr = [5, 5, 5, 5, 5, 5], target = 5
+# Output: 6
+# Explanation: All elements in the array are 5, so the target appears 6 times.
 
 def firstnlast(arr,n,k):
     f1=first(arr,n,k)
@@ -32,7 +34,7 @@ def first(arr,n,k):
 def last(arr,n,k):
     low=0
     high=n-1
-    last= -1
+    first= -1
     while low <= high:
         mid=(low+high)//2
         if arr[mid]==k:
@@ -43,8 +45,14 @@ def last(arr,n,k):
         else:
             high=mid-1
     return last
+def cnt(arr,n,k):
+    ans=[]
+    first=firstnlast(arr,n,k)
+    if first==-1:
+        return 0
+    return last-first+1
 arr=[2,8,8,8,8,8,8,10,11]
 n=len(arr)
 k=8
-result=firstnlast(arr,n,k)
+result=cnt(arr,n,k)
 print(result)
