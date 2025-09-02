@@ -13,10 +13,10 @@
 
 def firstnlast(arr,n,k):
     f1=first(arr,n,k)
-    if f1==-1:
-        return {-1,-1}
+    if f1 == -1:
+        return (-1, -1) 
     l1=last(arr,n,k)
-    return {f1,l1}
+    return (f1, l1)
 def first(arr,n,k):
     low=0
     high=n-1
@@ -34,7 +34,7 @@ def first(arr,n,k):
 def last(arr,n,k):
     low=0
     high=n-1
-    first= -1
+    last= -1
     while low <= high:
         mid=(low+high)//2
         if arr[mid]==k:
@@ -46,13 +46,12 @@ def last(arr,n,k):
             high=mid-1
     return last
 def cnt(arr,n,k):
-    ans=[]
-    first=firstnlast(arr,n,k)
+    first,last = firstnlast(arr,n,k)
     if first==-1:
         return 0
-    return last-first+1
+    return last - first + 1
 arr=[2,8,8,8,8,8,8,10,11]
 n=len(arr)
-k=8
+k=5
 result=cnt(arr,n,k)
 print(result)
