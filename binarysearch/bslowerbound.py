@@ -12,6 +12,7 @@
 # Output: 3
 # Explanation:
 # Index 3 is the smallest index such that arr[3] >= x.
+
 def lb(arr,target):
     n=len(arr)
     low=0
