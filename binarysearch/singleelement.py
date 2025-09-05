@@ -26,7 +26,7 @@ def find(arr,n):
             low=mid+1
         else:
             high=mid-1
-    return -1
+    return -1 
 arr=[1,1,2,2,3,3,4,4,5,5,6,6,7]
 n=len(arr)
 result=find(arr,n)
