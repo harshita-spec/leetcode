@@ -34,7 +34,6 @@ def hmax(arr):
     return maxi
 def fun(arr,hr):
     thr=0
-    m=len(arr)
     for i in arr:
         thr+=math.ceil(i/hr)
     return thr
