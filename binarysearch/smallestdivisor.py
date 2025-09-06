@@ -12,6 +12,9 @@
 # Explanation: If we choose 1, we get 17 as the sum. If we choose 2, we get 9 (4+2+1+2) <= 10 as the answer. So, 2 is the answer.
 import math
 def divisor(arr,t):
+    n = len(arr)
+    if n > t:
+        return -1
     low=1
     high=maxi(arr)
     while low<=high:
