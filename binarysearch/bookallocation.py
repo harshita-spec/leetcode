@@ -12,6 +12,8 @@
 # Explanation: The allocation of books will be 25, 46 | 28 | 49 | 24
 import math
 def allocate(arr,m):
+    if m>len(arr):
+        return -1
     low=max(arr)
     high=sum(arr)
     while low<=high:
