@@ -14,3 +14,33 @@
 # Hence, the value of dist is 0.5.
 # It can be shown that there is no possible way to add 10 gas stations in such a way that the value of dist is lower than this.
 
+def gasstation(arr, n, k):
+    low = 0
+    high = 0
+    for i in range(n - 1):
+        high = max(high, arr[i + 1] - arr[i])
+
+    diff = 1e-6
+    while high - low > diff:
+        mid = (low + high) / 2.0
+        count = countofstation(arr, mid)
+        if count > k:
+            low = mid
+        else:
+            high = mid
+    return high
+
+
+def countofstation(arr, mid):
+    count = 0
+    for i in range(1, len(arr)):
+        gap = arr[i] - arr[i - 1]
+        count += int(gap // mid)
+    return count
+
+
+arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+n = len(arr)
+k = 9
+result = gasstation(arr, n, k)
+print(round(result, 6))
