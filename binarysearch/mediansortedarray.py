@@ -36,16 +36,16 @@ def median(a,b):
         if mid2-1>=0:
             l2=b[mid2-1]
         if l1<=r2 and l2<=r1:
-            if n//2 ==1:
+            if n%2 ==1:
                 return max(l1,l2)
             return ((max(l1,l2)+min(r1,r2))/2.0)
         elif l1>r2:
             high=mid1-1
         else:
             low=mid1+1
-    return 0
+    return 0.0
 
-a=[2,3,4]
-b=[1,3,5]
+a=[]
+b=[1]
 result=median(a,b)
 print(result)
