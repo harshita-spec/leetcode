@@ -43,7 +43,7 @@ def median(a,b):
             high=mid1-1
         else:
             low=mid1+1
-    return 0.0
+    return 0
 
 a=[]
 b=[1]

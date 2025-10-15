@@ -30,16 +30,12 @@ def kthElement(a, b, m, n, k):
             l1 = a[mid1 - 1]
         if mid2 - 1 >= 0:
             l2 = b[mid2 - 1]
-
         if l1 <= r2 and l2 <= r1:
             return max(l1, l2)
-
-        # eliminate the halves:
         elif l1 > r2:
             high = mid1 - 1
         else:
             low = mid1 + 1
-
     return 0  
 a = [2, 3, 6, 7, 9]
 b = [1, 4, 8, 10]
