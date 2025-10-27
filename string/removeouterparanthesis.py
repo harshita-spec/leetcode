@@ -24,20 +24,20 @@
 # After removing outermost parentheses: "" + "()()" + "()"
 # Final result: "()()()".
 
-# def find_pairs(s):
-#     stack = []
-#     result = []
-#     n = len(s)
-#     for i in range(n):
-#         if s[i] == '(':
-#             stack.append(i) 
-#         elif s[i] == ')':
-#             if stack:
-#                 open_index = stack.pop()
-#                 result.append(s[open_index] + s[i])  
-#     return "".join(result)
-# s = "()(()())(())"
-# print(find_pairs(s))
+def find_pairs(s):
+    stack = []
+    result = []
+    n = len(s)
+    for i in range(n):
+        if s[i] == '(':
+            stack.append(i) 
+        elif s[i] == ')':
+            if stack:
+                open_index = stack.pop()
+                result.append(s[open_index] + s[i])  
+    return "".join(result)
+s = "()(()())(())"
+print(find_pairs(s))
 
 def removparant(s):
     count = 0
