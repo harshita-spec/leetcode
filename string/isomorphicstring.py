@@ -22,3 +22,18 @@
 # Input: s = "paper", t = "title"
 # Output: true
 
+def isomorphic(s,t):
+    n=len(s)
+    m=len(t)
+    if n!=m:
+        return False
+    for i in range(n):
+        for j in range(i+1,n):
+            if s[i]==s[j] and t[i]!=t[j]:
+                return False
+            if s[i]!=s[j] and t[i]==t[j]:
+                return False
+    return True
+s = "foo"
+t = "baa"
+print(isomorphic(s,t))
