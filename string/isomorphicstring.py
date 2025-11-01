@@ -22,38 +22,37 @@
 # Input: s = "paper", t = "title"
 # Output: true
 
-# def isomorphic(s,t):
-#     n=len(s)
-#     m=len(t)
-#     if n!=m:
-#         return False
-#     for i in range(n):
-#         for j in range(i+1,n):
-#             if s[i]==s[j] and t[i]!=t[j]:
-#                 return False
-#             if s[i]!=s[j] and t[i]==t[j]:
-#                 return False
-#     return True
+def isomorphic(s,t):
+    n=len(s)
+    m=len(t)
+    if n!=m:
+        return False
+    for i in range(n):
+        for j in range(i+1,n):
+            if s[i]==s[j] and t[i]!=t[j]:
+                return False
+            if s[i]!=s[j] and t[i]==t[j]:
+                return False
+    return True
+s = "foo"
+t = "baa"
+print(isomorphic(s,t))
 
-def isIsomorphic(s,t):
+def isIsomorphic(s, t):
     if len(s) != len(t):
         return False
-    
     mapST = {}
     mapTS = {}
-    
-    for c1, c2 in zip(s, t):
+    for i in range(len(s)):
+        c1, c2 = s[i], t[i]
+        
         if (c1 in mapST and mapST[c1] != c2) or (c2 in mapTS and mapTS[c2] != c1):
             return False
+        
         mapST[c1] = c2
         mapTS[c2] = c1
     
     return True
-
-print(isIsomorphic("egg", "add")) 
-print(isIsomorphic("foo", "bar")) 
-print(isIsomorphic("paper", "title")) 
-
-# s = "foo"
-# t = "baa"
-# print(isomorphic(s,t))
+print(isIsomorphic("egg", "add"))    
+print(isIsomorphic("foo", "bar"))   
+print(isIsomorphic("paper", "title"))
