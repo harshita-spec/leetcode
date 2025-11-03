@@ -32,3 +32,10 @@ def frequency(s):
     return res
 s = "tree"
 print(frequency(s))
+
+    # from collections import Counter
+    # ans = Counter(s).most_common()
+    # res =[]
+    # for k , v in ans:
+    #     res.append(k*v)
+    # return ''.join(res)
