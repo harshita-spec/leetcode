@@ -12,26 +12,25 @@
 # Input: s = "cbbd"
 # Output: "bb"
 
-# def palindrome(s):
-#     n = len(s)
-#     longest = ""
+def palindrome(s):
+    n = len(s)
+    longest = ""
     
-#     for i in range(n):
-#         for j in range(i, n):
-#             substring = s[i:j+1]
-#             if substring == substring[::-1] and len(substring) > len(longest):
-#                 longest = substring
+    for i in range(n):
+        for j in range(i, n):
+            substring = s[i:j+1]
+            if substring == substring[::-1] and len(substring) > len(longest):
+                longest = substring
     
-#     return longest
+    return longest
 
-# s = "cbbd"
-# print(palindrome(s))  
+s = "cbbd"
+print(palindrome(s))  
 
 def palindrome(s):
     res = ""
     reslen = 0
     n = len(s)
-
     def string(l, r):
         nonlocal res, reslen
         while l >= 0 and r < len(s) and s[l] == s[r]:
