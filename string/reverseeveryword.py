@@ -31,6 +31,6 @@ def reverseWords(s):
         result.append(word)
 
     return ' '.join(result)
-s = " amazing coding skills "
+s = "welcome to the jungle"
 print(reverseWords(s))  
     
