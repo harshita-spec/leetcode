@@ -30,7 +30,6 @@
 # 1090
 # 840
 
-
 def roman(s):
     roman={'I':1,'V':5,'X':10,'L':50,'C':100,'D':500,'M':1000}
     res=0
@@ -40,5 +39,5 @@ def roman(s):
         else:
             res+=roman[s[i]]
     return res
-s = "DCCCXC"
+s = "DCCCX"
 print(roman(s))
