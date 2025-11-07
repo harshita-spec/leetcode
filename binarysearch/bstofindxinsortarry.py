@@ -38,6 +38,6 @@ def binary(arr,low,high,target):
 arr=[-1,0,3,5,9,12]
 low=0
 high=len(arr)-1
-target=3
+target=2
 result=binary(arr,low,high,target)
 print(result)
