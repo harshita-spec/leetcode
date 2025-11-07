@@ -58,7 +58,6 @@ def sum(arr):
                     k-=1
     return ans
 
-arr = [-1, 0, 1, 2, -1, -4]
+arr = [2, -1, -1, 3, -1]
 ans = sum(arr) 
 print(ans)
-
