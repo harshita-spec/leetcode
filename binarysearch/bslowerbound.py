@@ -27,6 +27,6 @@ def lb(arr,target):
             low=mid+1
     return ans
 arr=[3,5,8,15,19]
-target=9
+target=15
 result=lb(arr,target)
 print(result)
