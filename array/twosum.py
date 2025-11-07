@@ -46,9 +46,13 @@ def twosum(arr,target):
     while left<right:
         sum=arr1[left]+arr1[right]
         if sum==target:
-            return "Yes"
+            return "yes"
         elif sum<target:
             left+=1
         else:
             right-=1
     return "no"
+
+nums = [3,2,4]
+target = 6
+print(twosum(nums,target))
