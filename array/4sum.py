@@ -42,7 +42,7 @@ def sum(arr,target):
                     l-=1
     return ans
 
-arr = [1,1,1,2,2,2,3,3,3,4,4,4,5,5]
-target=8
+arr = [1,1,1,2,2,2,3,3,3,4,4,4,5,5,5,6]
+target=14
 ans = sum(arr,target) 
 print(ans)
