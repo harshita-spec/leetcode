@@ -52,7 +52,7 @@ def mergesort(arr,low,high):
     return count
 def inversion(arr,n):
     return mergesort(arr,0,n-1)
-arr=[2, 3, 7, 1, 3, 5]
+arr=[-10, -5, 6, 11, 15, 17]
 n=len(arr)
 result=inversion(arr,n)
 print(result)
