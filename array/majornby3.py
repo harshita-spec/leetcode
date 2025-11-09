@@ -45,7 +45,7 @@ def majorityElement(v):
         ls.append(el2)
     return ls
 
-arr = [11, 33, 33,12,11,10,10,21,10,10,10,10, 11, 33, 11]
+arr = [11, 33, 33,12,11,10,10,21,10,10,10,10, 10,10,11, 33, 11]
 ans = majorityElement(arr)
 print("The majority elements are: ", end="")
 for it in ans:
