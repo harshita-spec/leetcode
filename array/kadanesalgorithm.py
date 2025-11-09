@@ -22,6 +22,6 @@ def kadane(arr):
             sum=0
     return maxi
 
-arr=[-2,-3,4,-1,-2,1,5,-3]
+arr=[2, 3, 5, -2, 7, -4]
 result=kadane(arr)
 print(result)
