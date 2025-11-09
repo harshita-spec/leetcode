@@ -29,7 +29,7 @@ def major(arr):
         if count1>(n/2):
             return el
     return -1
-arr=[2,2,1,1,1,2,2]
+arr=[7, 0, 0, 1, 7, 7, 2, 7, 7]
 result=major(arr)
 print(result)
 
