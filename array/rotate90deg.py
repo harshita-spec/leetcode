@@ -20,7 +20,7 @@ def mat(matrix):
     for i in range(n):
         matrix[i].reverse()
 
-arr = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+arr = [[0, 1, 1, 2], [2, 0, 3, 1], [4, 5, 0, 5], [5, 6, 7, 0]]
 mat(arr)
 for i in range(len(arr)):
     for j in range(len(arr[0])):
