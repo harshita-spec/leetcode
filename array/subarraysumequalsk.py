@@ -25,7 +25,7 @@ def findAllSubarraysWithGivenSum(arr, k):
         cnt += mpp[remove]
         mpp[preSum] += 1
     return cnt
-arr = [3, 1, 2, 4]
+arr = [3, 1, 2, 4,7]
 k = 6
 cnt = findAllSubarraysWithGivenSum(arr, k)
 print("The number of subarrays is:", cnt)
