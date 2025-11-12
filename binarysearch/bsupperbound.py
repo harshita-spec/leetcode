@@ -20,7 +20,7 @@ def ub(arr,target):
         else:
             low=mid+1
     return ans
-arr=[3,5,8,15,19]
-target=5
+arr=[3,5,8,15,19,21]
+target=9
 result=ub(arr,target)
 print(result)
