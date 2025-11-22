@@ -33,7 +33,7 @@ def fun(arr,mid):
             stu+=1
             pagestu=arr[i]
     return stu
-arr=[12, 34, 67, 90]
-m=2
+arr=[25, 46, 28, 49, 24]
+m=4
 result=allocate(arr,m)
 print(result)
