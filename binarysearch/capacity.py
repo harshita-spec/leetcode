@@ -53,7 +53,7 @@ def fun(arr,mid):
         else:
             load+=arr[i]
     return days
-arr=[1,2,3,4,5,6,7,8,9,10]
+arr=[1,2,3,4,5,6,7,8,9,10,11,12]
 days=5
 result=capacity(arr,days)
 print(result)
