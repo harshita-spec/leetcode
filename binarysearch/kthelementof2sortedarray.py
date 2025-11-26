@@ -38,6 +38,6 @@ def kthElement(a, b, m, n, k):
             low = mid1 + 1
     return 0  
 a = [2, 3, 6, 7, 9]
-b = [1, 4, 8, 10]
-print(kthElement(a, b, len(a), len(b), 5))
+b = [1, 4, 8, 10,12]
+print(kthElement(a, b, len(a), len(b), 7))
         
