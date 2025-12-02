@@ -29,5 +29,5 @@ def depthparanthesis(s):
             stack.pop()
             count-=1
     return maxcount
-s = "()(())"
+s =  "(1)+((2))+((3))"
 print(depthparanthesis(s))
