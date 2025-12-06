@@ -16,5 +16,5 @@ from collections import Counter
 def anagram(s,t):
     return Counter(s)==Counter(t)
 s = "dog"
-t = "cat"
+t = "doff"
 print(anagram(s,t))
