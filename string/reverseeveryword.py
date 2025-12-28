@@ -18,7 +18,6 @@ def reverseWords(s):
     n = len(s)
     result = []
     i = n - 1
-
     while i >= 0:
         while i >= 0 and s[i] == ' ':
             i -= 1
@@ -29,7 +28,6 @@ def reverseWords(s):
             i -= 1
         word = s[i + 1:j + 1]
         result.append(word)
-
     return ' '.join(result)
 s = "welcome to the jungle"
 print(reverseWords(s))  
