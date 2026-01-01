@@ -29,6 +29,6 @@ def reverseWords(s):
         word = s[i + 1:j + 1]
         result.append(word)
     return ' '.join(result)
-s = " amazing coding skills "
+s = "amazing coding skills"
 print(reverseWords(s))  
     
