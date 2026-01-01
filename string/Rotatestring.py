@@ -26,7 +26,6 @@ def rotate(s1,s2):
             return False
     else:
         return False
-
 s1 = "abcde" 
-s2 = "cdeab"
+s2 = "adeac"
 print(rotate(s1,s2))
