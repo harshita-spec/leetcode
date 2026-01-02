@@ -29,5 +29,5 @@ def sum(s):
             total += (maxi - mini)
 
     return total
-s="aabcbaa"
+s="aabcb"
 print(sum(s))
