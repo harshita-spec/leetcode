@@ -53,13 +53,27 @@ class SLL:
         a=self.head
         self.head=a.next
         a.next=None
+
 # deleting a node at end
     def delete_at_end(self):
         print("deleting at end:")
-        a=self.head
-        while a.next.next is not None:
+        prev=self.head
+        a=self.head.next
+        while a.next is not None:
             a=a.next
+            prev=prev.next
+        prev.next=None
+
+# deletion at specific position can be implemented similarly
+    def delete_at_specific_position(self,position):
+        prev=self.head
+        a=self.head.next
+        for i in range(1,position-1):
+            a=a.next
+            prev=prev.next
+        prev.next=a.next
         a.next=None
+
 n1=Node(5)
 sll=SLL()
 sll.head=n1
@@ -77,4 +91,6 @@ sll.traversal()
 sll.delete_at_beginning()
 sll.traversal()
 sll.delete_at_end()
+sll.traversal()
+sll.delete_at_specific_position(2)
 sll.traversal()
