@@ -35,6 +35,13 @@ class SLL:
         while a.next is not None:
             a=a.next
         a.next=ne
+    def insert_specific_position(self,position,data):
+        npn=Node(data)
+        a=self.head
+        for i in range(1,position-1):
+            a=a.next
+        npn.next=a.next
+        a.next=npn
 n1=Node(5)
 sll=SLL()
 sll.head=n1
@@ -46,4 +53,6 @@ sll.traversal()
 sll.insert_at_beginning(1)
 sll.traversal()
 sll.insert_at_end(12)
+sll.traversal()
+sll.insert_specific_position(2,7)
 sll.traversal()
