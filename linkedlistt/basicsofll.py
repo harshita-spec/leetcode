@@ -36,6 +36,7 @@ class SLL:
             a=a.next
         a.next=ne
     def insert_specific_position(self,position,data):
+        print("insert at specific position:")
         npn=Node(data)
         a=self.head
         for i in range(1,position-1):
