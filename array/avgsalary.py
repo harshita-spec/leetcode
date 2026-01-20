@@ -16,18 +16,21 @@
 # Explanation: Minimum salary and maximum salary are 1000 and 3000 respectively.
 # Average salary excluding minimum and maximum salary is (2000) / 1 = 2000
 
-def average( salary):
-    minsal=float('INF')
-    maxsal=0
-    totalsal=0
-    n=len(salary)
+def average(salary):
+    minsal = float('inf')
+    maxsal = 0
+    totalsal = 0
+    n = len(salary)
+
     for i in range(n):
         totalsal += salary[i]
-        if salary[i] > maxsal :
-        	maxsal=salary[i]
-        if salary[i] < minsal: 
-        	minsal=salary[i]
-    totalsum = totalsal - maxsal -minsal
-    return  totalsum /(n-2)
-salary=[4000,3000,1000,2000]
+        if salary[i] > maxsal:
+            maxsal = salary[i]
+        if salary[i] < minsal:
+            minsal = salary[i]
+
+    totalsum = totalsal - maxsal - minsal
+    return totalsum / (n - 2)
+
+salary = [4000, 3000, 1000, 2000]
 print(average(salary))
