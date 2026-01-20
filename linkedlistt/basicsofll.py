@@ -9,7 +9,7 @@ class SLL:
     def __init__(self):
         self.head=None
 
-    #traversal of linked list
+#traversal of linked list
     def traversal(self):
         if self.head is None:
             print("Linked List is empty")
@@ -21,13 +21,14 @@ class SLL:
                 temp=temp.next
             print("None")
 
-    #insert at the beginning of linked list
+#insert at the beginning of linked list
     def insert_at_beginning(self,data):
         print("insert at beginning:")
         new_node=Node(data)
         new_node.next=self.head
-        self.head=new_node  
-    #insert at the end of linked list
+        self.head=new_node 
+
+#insert at the end of linked list
     def insert_at_end(self,data):
         print("insert at end:")
         ne=Node(data)
@@ -35,6 +36,8 @@ class SLL:
         while a.next is not None:
             a=a.next
         a.next=ne
+
+#insert at specific position       
     def insert_specific_position(self,position,data):
         print("insert at specific position:")
         npn=Node(data)
@@ -43,6 +46,13 @@ class SLL:
             a=a.next
         npn.next=a.next
         a.next=npn
+
+#deleting a node at beginning
+    def delete_at_beginning(self):
+        print("deleting at beginning:")
+        a=self.head
+        self.head=a.next
+        a.next=None
 n1=Node(5)
 sll=SLL()
 sll.head=n1
@@ -56,4 +66,6 @@ sll.traversal()
 sll.insert_at_end(12)
 sll.traversal()
 sll.insert_specific_position(2,7)
+sll.traversal()
+sll.delete_at_beginning()
 sll.traversal()
