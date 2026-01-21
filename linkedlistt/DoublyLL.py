@@ -44,6 +44,19 @@ class DLL:
             a=a.next
         a.next=ns
         ns.prev=a
+
+#insert at specific position
+    def insert_specific_position(self,data,position):
+        npn=Node(data)
+        a=self.head
+        for i in range(1,position-1):
+            a=a.next
+        npn.next=a.next
+        npn.prev=a
+        if a.next is not None:
+            a.next.prev=npn
+        a.next=npn     
+
 n1=Node(10)
 dll=DLL()
 dll.head=n1
@@ -62,5 +75,8 @@ dll.insert_at_beginning(30)
 dll.forward_traversal()
 dll.backward_traversal()
 dll.insert_at_end(40)
+dll.forward_traversal()
+dll.backward_traversal()
+dll.insert_specific_position(50,3)
 dll.forward_traversal()
 dll.backward_traversal()
