@@ -4,6 +4,7 @@ class Node:
         self.data=data
         self.next=None
         self.prev=None  
+
 #creating a class for DLL
 class DLL:
     def __init__(self):
@@ -17,6 +18,7 @@ class DLL:
             print(a.data,end=" <-> ")
             a=a.next
         print("none")
+
 # backward traversal of linked list
     def backward_traversal(self):
         print("none",end=" <-> ")
@@ -28,7 +30,7 @@ class DLL:
             a=a.prev
         print("none")
 
-# inserting nodes and linking them
+# inserting nodes at beginning
     def insert_at_beginning(self,data):
         nb=Node(data)
         a=self.head
@@ -56,6 +58,7 @@ class DLL:
         if a.next is not None:
             a.next.prev=npn
         a.next=npn     
+
 
 n1=Node(10)
 dll=DLL()
