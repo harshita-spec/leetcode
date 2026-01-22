@@ -74,6 +74,17 @@ class DLL:
             prev=prev.next
         a.prev=None
         prev.next=None
+#deletion at specific position
+    def deletion_at_position(self,position):
+        prev=self.head
+        a=self.head.next
+        for i in range(1,position-1):
+            a=a.next
+            prev=prev.next
+        prev.next=a.next
+        a.next.prev=prev
+        a.next=None
+        a.prev=None
 
 n1=Node(10)
 dll=DLL()
@@ -102,5 +113,8 @@ dll.delete_at_beginning()
 dll.forward_traversal()
 dll.backward_traversal()
 dll.deletion_at_end()
+dll.forward_traversal()
+dll.backward_traversal()
+dll.deletion_at_position(2)
 dll.forward_traversal()
 dll.backward_traversal()
