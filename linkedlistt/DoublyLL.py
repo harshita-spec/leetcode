@@ -65,6 +65,15 @@ class DLL:
         self.head=a.next
         a.next.prev=None
         a.next=None
+#deletion at end
+    def deletion_at_end(self):
+        prev=self.head
+        a=self.head.next
+        while a.next is not None:
+            a=a.next
+            prev=prev.next
+        a.prev=None
+        prev.next=None
 
 n1=Node(10)
 dll=DLL()
@@ -90,5 +99,8 @@ dll.insert_specific_position(50,3)
 dll.forward_traversal()
 dll.backward_traversal()
 dll.delete_at_beginning()
+dll.forward_traversal()
+dll.backward_traversal()
+dll.deletion_at_end()
 dll.forward_traversal()
 dll.backward_traversal()
