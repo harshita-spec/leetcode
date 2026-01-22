@@ -74,6 +74,7 @@ class SLL:
             prev=prev.next
         prev.next=a.next
         a.next=None
+
 #delete a specific node
     def delete_a_node(self,key):
         print("deleting at specific node data:")
@@ -85,6 +86,25 @@ class SLL:
         if a.data==key:
             prev.next=a.next
             a.next=None
+
+#length of linked list
+    def length(self):
+        count=0
+        a=self.head
+        while a is not None:
+            count+=1
+            a=a.next
+        return count   
+
+#Search in Linked List
+    def search(self,key):
+        a=self.head
+        while a is not None:
+            if a.data==key:
+                return True
+            a=a.next
+        return False  
+              
 n1=Node(5)
 sll=SLL()
 sll.head=n1
@@ -109,3 +129,6 @@ sll.delete_at_specific_position(2)
 sll.traversal()
 sll.delete_a_node(15)
 sll.traversal()
+print("Length of the linked list :", sll.length())
+print("search of element 10 in LL:",sll.search(10))
+print("search of element 12 in LL:",sll.search(12))
