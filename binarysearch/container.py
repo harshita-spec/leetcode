@@ -37,4 +37,5 @@ def maxArea( height):
                 right-=1
         return maxi
 height=[1,8,6,2,5,4,8,3,7]
-print(maxArea(height))
+result=maxArea(height)
+print(result)
