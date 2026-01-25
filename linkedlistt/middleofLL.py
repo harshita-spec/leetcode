@@ -52,4 +52,4 @@ n5=Node(35)
 n4.next=n5
 sll.traversal()
 sll.middle()
-# print(sll.middle().data)
+print(sll.middle().data)
