@@ -10,8 +10,8 @@
 # Explanation: The largest element in array is 99
 
 def array(a):
-    largest=a[0]
-    for i in range(1,len(a)):
+    largest=0
+    for i in range(len(a)):
         if largest<a[i]:
             largest=a[i]
     return largest
