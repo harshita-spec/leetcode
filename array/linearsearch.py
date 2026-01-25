@@ -11,15 +11,13 @@
 # Explanation:
 # The value 6 does not occur in the array, hence output is -1
 
-def array(arr,n):
+def array(arr):
     num=int(input("enter the number: "))
-    for i in range(n):
+    for i in range(len(arr)):
         if arr[i]==num:
             return i
         else:
             return -1
     return i
 arr=[1,4,6,7,8]
-n=len(arr)
-result=array(arr,n)
-print(result)
+print(array(arr))
