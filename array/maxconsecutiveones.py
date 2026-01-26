@@ -18,11 +18,14 @@ def consecutive(arr,n):
     for i in range(n):
         if arr[i]==1:
             count+=1
-            maxi=max(maxi,count)
+            maxi=maximum(maxi,count)
         else:
             count=0
     return maxi
-arr=[1, 1, 0, 0, 1, 1, 1, 0]
+def maximum(a,b):
+    if a>b:return a
+    else:return b
+arr=[1, 1, 0, 0, 1, 1, 1,1,1,0,1, 0]
 n=len(arr)
 result=consecutive(arr,n)
 print(result)
