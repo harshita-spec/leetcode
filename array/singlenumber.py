@@ -21,16 +21,16 @@
 #             return num
         
 #better
-def single(arr):
-    mpp={}
-    for i in range(len(arr)):
-        if arr[i] in mpp:
-            mpp[arr[i]]+=1
-        else:
-            mpp[arr[i]]=1
-    for i ,value in mpp.items():
-        if value==1:
-            return i
+# def single(arr):
+#     mpp={}
+#     for i in range(len(arr)):
+#         if arr[i] in mpp:
+#             mpp[arr[i]]+=1
+#         else:
+#             mpp[arr[i]]=1
+#     for i ,value in mpp.items():
+#         if value==1:
+#             return i
 
 #optimal
 def single(arr):
@@ -38,5 +38,5 @@ def single(arr):
     for i in range(len(arr)):
         res=res^arr[i]
     return res
-arr=[1,2,2,4,3,3,5,1,4]
+arr=[1,2,2,4,3,3,5,1,5,6,4]
 print(single(arr))
