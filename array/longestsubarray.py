@@ -10,9 +10,18 @@
 # Output: 0
 # Explanation:
 # There is no sub-array in the array that sums to 6. Therefore, the output is 0.
+#brute force
+def findsubarray(arr,k):
+    lenh=0
+    for i in range(len(arr)):
+        sum=0
+        for j in range(i,len(arr)):
+            sum+=arr[j]
+            if sum==k:
+                lenh=max(lenh,j-i+1)
+    return lenh
 
 #optimal solution
-
 def getLongestSubarray(a, k):
     n = len(a) 
     left= right = 0
@@ -28,3 +37,7 @@ def getLongestSubarray(a, k):
         if right < n: 
             Sum += a[right]
     return maxLen
+arr = [10, 5, 2, 7, 1, 9]
+k = 15
+print(getLongestSubarray(arr, k))
+print(findsubarray(arr,k))
