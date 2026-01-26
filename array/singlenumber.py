@@ -10,14 +10,33 @@
 # Explanation : The integer 5 has appeared only once
 
 #brute
+# def single(arr):
+#     for i in range(len(arr)):
+#         count=0
+#         num=arr[i]
+#         for j in range(len(arr)):
+#             if arr[j]==num:
+#                 count+=1
+#         if count==1:
+#             return num
+        
+#better
 def single(arr):
+    mpp={}
     for i in range(len(arr)):
-        count=0
-        num=arr[i]
-        for j in range(len(arr)):
-            if arr[j]==num:
-                count+=1
-        if count==1:
-            return num
-arr=[1,2,2,4,3,1,4]
+        if arr[i] in mpp:
+            mpp[arr[i]]+=1
+        else:
+            mpp[arr[i]]=1
+    for i ,value in mpp.items():
+        if value==1:
+            return i
+
+#optimal
+def single(arr):
+    res=0
+    for i in range(len(arr)):
+        res=res^arr[i]
+    return res
+arr=[1,2,2,4,3,3,5,1,4]
 print(single(arr))
