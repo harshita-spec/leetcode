@@ -14,16 +14,16 @@
 # All 3 zeroes are moved to the end and the order of the other elements stay the same
 
 #brute force
-# def move0(arr):
-#     temp=[]
-#     for i in range(len(arr)):
-#         if arr[i]!=0:
-#             temp.append(arr[i])
-#     for i in range(len(temp)):
-#         arr[i]=temp[i]
-#     for i in range(len(temp),len(arr)):
-#         arr[i]=0
-#     return arr
+def move00(arr):
+    temp=[]
+    for i in range(len(arr)):
+        if arr[i]!=0:
+            temp.append(arr[i])
+    for i in range(len(temp)):
+        arr[i]=temp[i]
+    for i in range(len(temp),len(arr)):
+        arr[i]=0
+    return arr
 
 #optimal
 def move0(arr):
@@ -38,3 +38,4 @@ def move0(arr):
     return arr
 arr=[0, 0, 0, 1, 3, -2]
 print(move0(arr))
+print(move00(arr))
