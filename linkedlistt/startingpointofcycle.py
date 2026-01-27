@@ -23,6 +23,7 @@ class SLL:
     def __init__(self):
         self.head=None
 
+    #brute force
     def loop_starting_point(self):
         mpp={}
         temp=self.head
@@ -32,7 +33,19 @@ class SLL:
             mpp[temp]=1
             temp=temp.next
         return None
-
+    def loop_starting_point_optimal(self):
+        slow=self.head
+        fast=self.head
+        while fast is not None and fast.next is not None:
+            slow=slow.next
+            fast=fast.next.next
+            if slow == fast:
+                slow=self.head
+                while slow!=fast:
+                    slow=slow.next
+                    fast=fast.next
+                return slow
+        return None
 n1=Node(5)
 sll=SLL()
 sll.head=n1
@@ -46,5 +59,9 @@ n4.next=n2
 result=sll.loop_starting_point()
 if result:
     print(result.data)
+else:
+    print("No loop detected")
+if sll.loop_starting_point_optimal():
+    print(sll.loop_starting_point_optimal().data)
 else:
     print("No loop detected")
