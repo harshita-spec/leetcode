@@ -34,6 +34,21 @@ class SLL:
             timer+=1
             temp=temp.next
         return 0
+    #optimal
+    def length_optimal(self):
+        slow=self.head
+        fast=self.head
+        while fast is not None and fast.next is not None:
+            slow=slow.next
+            fast=fast.next.next
+            if slow==fast:
+                count=1
+                fast=fast.next
+                while slow!=fast:
+                    count+=1
+                    fast=fast.next
+                return count
+        return 0
 n1=Node(5)
 sll=SLL()
 sll.head=n1
@@ -45,3 +60,4 @@ n4=Node(25)
 n3.next=n4
 n4.next=n2
 print(sll.length())
+print(sll.length_optimal())
