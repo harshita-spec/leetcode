@@ -22,16 +22,19 @@ class Node:
 class SLL:
     def __init__(self):
         self.head=None
-
-    # def detectloop(self):
-    #     mpp={}
-    #     temp=self.head
-    #     while temp is not None:
-    #         if temp in mpp:
-    #             return True
-    #         mpp[temp]=1
-    #         temp=temp.next
-    #     return False
+    
+    #brute
+    def detectloop(self):
+        mpp={}
+        temp=self.head
+        while temp is not None:
+            if temp in mpp:
+                return True
+            mpp[temp]=1
+            temp=temp.next
+        return False
+    
+    #optimal 
     def detect_loop(self):
         slow=self.head
         fast=self.head
@@ -52,6 +55,10 @@ n2.next=n3
 n4=Node(25)
 n3.next=n4
 n4.next=n2
+if sll.detectloop():
+    print("Loop detected")
+else:
+    print("No loop detected")
 if sll.detect_loop():
     print("Loop detected")
 else:
