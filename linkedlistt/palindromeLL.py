@@ -38,10 +38,12 @@ sll=SLL()
 sll.head=n1
 n2=Node(10)
 n1.next=n2
-n3=Node(10)
+n3=Node(15)
 n2.next=n3
-n4=Node(15)
+n4=Node(10)
 n3.next=n4
+n5=Node(5)
+n4.next=n5
 if sll.palindrome():
     print("Palindrome")
 else:
