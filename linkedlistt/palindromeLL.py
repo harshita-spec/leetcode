@@ -29,10 +29,35 @@ class SLL:
             temp=temp.next
         temp=self.head
         while temp is not None:
-            if st.pop()!=temp.data:
+            if st.pop() != temp.data:
                 return False
             temp=temp.next
         return True
+    
+    def palindrome_optimal(self):
+        if self.head is None or self.head.next is None:
+            return True
+        slow=self.head
+        fast=self.head
+        while fast is not None and fast.next is not None:
+            slow=slow.next
+            fast=fast.next.next
+        prev=None
+        curr=slow
+        while curr is not None:
+            front=curr.next
+            curr.next=prev
+            prev=curr
+            curr=front
+        left=self.head
+        right=prev
+        while right is not None:
+            if left.data != right.data:
+                return False
+            left=left.next
+            right=right.next
+        return True
+    
 n1=Node(5)
 sll=SLL()
 sll.head=n1
@@ -47,4 +72,8 @@ n4.next=n5
 if sll.palindrome():
     print("Palindrome")
 else:
+    print("Not a Palindrome")
+if sll.palindrome_optimal():
+    print("Palindrome")
+else:      
     print("Not a Palindrome")
