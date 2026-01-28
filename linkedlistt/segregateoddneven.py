@@ -24,29 +24,29 @@ class SLL:
         self.head=None
     
     #brute force approach
-    # def segregate_odd_even(self):
-    #     if self.head is None or self.head.next is None:
-    #         return self.head
-    #     arr=[]
-    #     temp=self.head
-    #     while temp is not None and temp.next is not None:
-    #         arr.append(temp.data)
-    #         temp=temp.next.next
-    #     if temp:
-    #         arr.append(temp.data)
-    #     temp=self.head.next
-    #     while temp is not None and temp.next is not None:
-    #         arr.append(temp.data)
-    #         temp=temp.next.next
-    #     if temp:
-    #         arr.append(temp.data)
-    #     temp=self.head
-    #     i=0
-    #     while temp is not None:
-    #         temp.data=arr[i]
-    #         i+=1
-    #         temp=temp.next
-    #     return self.head
+    def segregate_odd_even(self):
+        if self.head is None or self.head.next is None:
+            return self.head
+        arr=[]
+        temp=self.head
+        while temp is not None and temp.next is not None:
+            arr.append(temp.data)
+            temp=temp.next.next
+        if temp:
+            arr.append(temp.data)
+        temp=self.head.next
+        while temp is not None and temp.next is not None:
+            arr.append(temp.data)
+            temp=temp.next.next
+        if temp:
+            arr.append(temp.data)
+        temp=self.head
+        i=0
+        while temp is not None:
+            temp.data=arr[i]
+            i+=1
+            temp=temp.next
+        return self.head
     
     #optimal approach
     def segregate_odd_even(self):
