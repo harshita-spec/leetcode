@@ -63,6 +63,17 @@ class SLL:
         odd.next=evenhead
         return self.head
     
+    def traversal(self):
+        if self.head is None:
+            print("Linked List is empty")
+            return 
+        else:
+            temp=self.head
+            while temp:
+                print(temp.data,end=" -> ")
+                temp=temp.next
+            print("None")
+
 n1=Node(5)
 sll=SLL()
 sll.head=n1
@@ -75,8 +86,4 @@ n3.next=n4
 n5=Node(30)
 n4.next=n5
 sll.segregate_odd_even()
-temp=sll.head
-while temp is not None:
-    print(temp.data,end=" -> ")
-    temp=temp.next
-print("none")
+sll.traversal()
