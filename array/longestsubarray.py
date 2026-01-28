@@ -10,6 +10,7 @@
 # Output: 0
 # Explanation:
 # There is no sub-array in the array that sums to 6. Therefore, the output is 0.
+
 #brute force
 def findsubarray(arr,k):
     lenh=0
