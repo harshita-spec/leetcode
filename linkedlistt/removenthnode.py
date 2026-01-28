@@ -50,15 +50,39 @@ class SLL:
                 print(temp.data,end=" -> ")
                 temp=temp.next
             print("None")
+    
+    def remove(self,n):
+        fast=self.head
+        slow=self.head
+        for _ in range(n+1):
+            fast = fast.next
+        if fast is None:
+            return self.head.next
+        while fast is not None:
+            slow=slow.next
+            fast=fast.next 
+        delnode=slow.next
+        slow.next=slow.next.next
+        delnode.next=None
+        return self.head
+    
+n1 = Node(5)
+sll = SLL()
+sll.head = n1
+n2 = Node(10)
+n1.next = n2
+n3 = Node(15)
+n2.next = n3
+n4 = Node(25)
+n3.next = n4
+n5 = Node(30)
+n4.next = n5
+n6 = Node(40)
+n5.next = n6
+n7 = Node(50)
+n6.next = n7
 
-n1=Node(5)
-sll=SLL()
-sll.head=n1
-n2=Node(10)
-n1.next=n2
-n3=Node(15)
-n2.next=n3
-n4=Node(25)
-n3.next=n4
-sll.remove_nth_from_end(2)
+# sll.remove_nth_from_end(2)
+# sll.traversal()
+sll.remove(3)
 sll.traversal()
