@@ -82,7 +82,7 @@ n5.next = n6
 n7 = Node(50)
 n6.next = n7
 
-# sll.remove_nth_from_end(2)
-# sll.traversal()
+sll.remove_nth_from_end(2)
+sll.traversal()
 sll.remove(3)
 sll.traversal()
