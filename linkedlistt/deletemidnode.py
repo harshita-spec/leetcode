@@ -54,6 +54,21 @@ class SLL:
         temp.next=temp.next.next
         delnode.next=None
         return self.head
+    
+    #optimal
+    def deletemidnode_optimal(self):
+        if self.head is None or self.head.next is None:
+            return None
+        slow=self.head
+        fast =self.head
+        fast=fast.next.next
+        while fast is not None and fast.next is not None:
+            slow=slow.next
+            fast=fast.next.next
+        delnode=slow.next
+        slow.next=slow.next.next
+        delnode.next=None
+        return self.head
 
 n1 = Node(5)
 sll = SLL()
@@ -69,4 +84,6 @@ n4.next = n5
 n6 = Node(40)
 n5.next = n6
 sll.deletemidnode()
+sll.traversal()
+sll.deletemidnode_optimal()
 sll.traversal()
