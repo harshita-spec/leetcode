@@ -9,7 +9,8 @@
 # Output: 1
 # Explanation:Here, the element 1 is the minimum element in the array.
 
-def minimum(arr,n):
+def minimum(arr):
+    n=len(arr)
     low=0
     high=n-1
     ans=float('inf')
@@ -26,6 +27,5 @@ def minimum(arr,n):
             high=mid-1
     return ans
 arr=[4, 5, 6, 7, 0, 1, 2, 3]
-n=len(arr)
-result=minimum(arr,n)
+result=minimum(arr)
 print(result)
