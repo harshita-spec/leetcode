@@ -15,10 +15,10 @@ class LL:
             print("Linked List is empty")
             return 
         else:
-            temp=self.head
-            while temp:
-                print(temp.data,end=" -> ")
-                temp=temp.next
+            t=self.head
+            while t:
+                print(t.data,end=" -> ")
+                t=t.next
             print("None")
 n1=Node(5)
 sll=LL()
