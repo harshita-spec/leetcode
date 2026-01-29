@@ -50,9 +50,9 @@ class SLL:
         temp=self.head
         for _ in range(mid-1):
             temp=temp.next
-        delnode=temp.next
+        
         temp.next=temp.next.next
-        delnode.next=None
+        temp.next.next=None
         return self.head
     
     #optimal
