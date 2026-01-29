@@ -10,12 +10,12 @@
 # Expalantion: The target is 6, which is not present in the array. Therefore, the output is [-1, -1].
 
 def firstnlast(arr,n,k):
-    f1=first(arr,n,k)
+    f1=first(arr,k)
     if f1==-1:
         return {-1,-1}
-    l1=last(arr,n,k)
-    return {f1,l1}
-def first(arr,n,k):
+    return {f1,last(arr,k)}
+def first(arr,k):
+    n=len(arr)
     low=0
     high=n-1
     first= -1
@@ -29,7 +29,8 @@ def first(arr,n,k):
         else:
             high=mid-1
     return first
-def last(arr,n,k):
+def last(arr,k):
+    n=len(arr)
     low=0
     high=n-1
     last= -1
@@ -43,49 +44,7 @@ def last(arr,n,k):
         else:
             high=mid-1
     return last
-arr=[2,8,8,8,8,8,8,10,11]
+arr=[2,8,8,8,8,8,8,8,10,11]
 n=len(arr)
 k=8
-result=firstnlast(arr,n,k)
-print(result)
-
-# class Solution:
-#     def searchRange(self, nums: List[int], target: int) -> List[int]:
-#         n=len(nums)
-#         f1 = self.first(nums,target)
-#         if f1==-1:
-#             return [-1,-1]
-#         l1=self.last(nums,target)
-#         return [f1,l1]
-#     @staticmethod
-#     def first(nums,target):
-#         n=len(nums)
-#         low=0
-#         high=n-1
-#         first= -1
-#         while low <= high:
-#             mid=(low+high)//2
-#             if nums[mid]==target:
-#                 first=mid
-#                 high=mid-1
-#             elif nums[mid]<target:
-#                 low=mid+1
-#             else:
-#                 high=mid-1
-#         return first
-#     @staticmethod
-#     def last(nums,target):
-#         n=len(nums)
-#         low=0
-#         high=n-1
-#         last= -1
-#         while low <= high:
-#             mid=(low+high)//2
-#             if nums[mid]==target:
-#                 last=mid
-#                 low=mid+1
-#             elif nums[mid]<target:
-#                 low=mid+1
-#             else:
-#                 high=mid-1
-#         return last
+print(firstnlast(arr,n,k))
