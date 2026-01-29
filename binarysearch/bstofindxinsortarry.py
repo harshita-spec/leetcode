@@ -9,7 +9,7 @@
 # Output: -1
 # Explanation: The target integer 2 does not exist in nums so return -1
 
-def binary(arr,target):
+def binary1(arr,target):
     n=len(arr)
     low=0
     high=n-1
@@ -39,5 +39,6 @@ arr=[-1,0,3,5,9,12]
 low=0
 high=len(arr)-1
 target=2
-result=binary(arr,low,high,target)
-print(result)
+print(binary(arr,low,high,target))
+r2=binary1(arr,target)
+print(r2)
