@@ -98,6 +98,7 @@ n4.next = n5
 n6 = Node(4)
 n5.next = n6   
 sll.traversal()
-# sll.sortll()
+sll.sortll()
+sll.traversal()
 sll.head = sll.sortLL(sll.head)
 sll.traversal()
