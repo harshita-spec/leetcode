@@ -29,7 +29,7 @@ class SLL:
             return 
         else:
             temp=self.head
-            while temp:
+            while temp is not None:
                 print(temp.data,end=" -> ")
                 temp=temp.next
             print("None")
@@ -37,23 +37,22 @@ class SLL:
     #brute 
     def deletemidnode(self):
         if self.head is None or self.head.next is None:
+            self.head = None
             return None
-        count=0
-        temp=self.head
-        while temp is not None:
-            count+=1
-            temp=temp.next
-        mid=count//2
-        if mid==0:
-            newhead=self.head.next
-            return newhead
-        temp=self.head
-        for _ in range(mid-1):
-            temp=temp.next
-        
-        temp.next=temp.next.next
-        temp.next.next=None
+        count = 0
+        temp = self.head
+        while temp:
+            count += 1
+            temp = temp.next
+        mid = count // 2
+        temp = self.head
+        for _ in range(mid - 1):
+            temp = temp.next
+        middle = temp.next
+        temp.next = middle.next
+        middle.next = None
         return self.head
+
     
     #optimal
     def deletemidnode_optimal(self):
@@ -83,7 +82,8 @@ n5 = Node(30)
 n4.next = n5
 n6 = Node(40)
 n5.next = n6
-sll.deletemidnode()
+# sll.traversal()
+# sll.deletemidnode()
 sll.traversal()
 sll.deletemidnode_optimal()
 sll.traversal()
