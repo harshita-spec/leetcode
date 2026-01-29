@@ -37,6 +37,5 @@ def rotate(nums,target):
                 high=mid-1
     return False 
 nums=[5,1,2,3,4,5,5,5,5,5,5]
-target=7
-result=rotate(nums,target)
-print(result)    
+target=5
+print(rotate(nums,target))
