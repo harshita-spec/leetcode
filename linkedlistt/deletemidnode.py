@@ -82,8 +82,8 @@ n5 = Node(30)
 n4.next = n5
 n6 = Node(40)
 n5.next = n6
-# sll.traversal()
-# sll.deletemidnode()
+sll.traversal()
+sll.deletemidnode()
 sll.traversal()
 sll.deletemidnode_optimal()
 sll.traversal()
