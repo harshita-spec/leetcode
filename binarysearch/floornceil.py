@@ -10,10 +10,9 @@
 # Explanation: The floor of 8 in the array is 8, and the ceiling of 8 in the array is also 8.
 
 def ceil(arr,target):
-    n=len(arr)
     low=0
-    high=n-1
-    ans=n
+    high=len(arr)-1
+    ans=len(arr)
     while low<=high:
         mid=(low+high)//2
         if arr[mid]>=target:
@@ -23,10 +22,9 @@ def ceil(arr,target):
             low=mid+1
     return ans
 def floor(arr,target):
-    n=len(arr)
     low=0
-    high=n-1
-    ans=n
+    high=len(arr)-1
+    ans=len(arr)
     while low<=high:
         mid=(low+high)//2
         if arr[mid]<=target:
@@ -37,5 +35,5 @@ def floor(arr,target):
     return ans
 arr=[3, 4, 4, 7, 8, 10]
 target=5
-print(f"floor of {target} is",floor(arr,target))
-print(f"ceil of {target} is",ceil(arr,target))
+print(floor(arr,target))
+print(ceil(arr,target))
