@@ -60,6 +60,36 @@ class SLL:
                 count2 -= 1
             temp = temp.next
         return head
+    
+    def sortLL(self,head):
+        if head is None or head.next is None:
+            return head
+        zerohead=Node(-1)
+        onehead=Node(-1)
+        twohead=Node(-1)
+        zero=zerohead
+        one=onehead
+        two=twohead
+        temp=head
+        while temp is not None:
+            if temp.data==0:
+                zero.next=temp
+                zero=zero.next
+            elif temp.data==1:
+                one.next=temp
+                one=one.next
+            else:
+                two.next=temp
+                two=two.next
+            temp=temp.next
+        if onehead.next is not None:
+            zero.next=onehead.next
+        else:
+            zero.next=twohead.next
+        one.next=twohead.next
+        two.next=None
+        return zerohead.next
+
   
 n1 = Node(0)
 sll = SLL()
@@ -77,4 +107,5 @@ n5.next = n6
 sll.traversal()
 sll.head = sll.sortll(sll.head)
 sll.traversal()
-
+sll.head = sll.sortLL(sll.head)
+sll.traversal()
