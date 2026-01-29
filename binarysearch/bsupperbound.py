@@ -22,5 +22,4 @@ def ub(arr,target):
     return ans
 arr=[1,2,2,3]
 target=2
-result=ub(arr,target)
-print(result)
+print(ub(arr,target))
