@@ -18,7 +18,8 @@
 # Input: nums = [1], target = 0
 # Output: -1
 
-def rotate(arr,n,target):
+def rotate(arr,target):
+    n=len(arr)
     low=0
     high=n-1
     while low<=high:
@@ -37,7 +38,6 @@ def rotate(arr,n,target):
                 high=mid-1
     return -1
 arr=[7,8,9,1,2,3,4,5,6]
-n=len(arr)
-target=2
-result=rotate(arr,n,target)
+target=8
+result=rotate(arr,target)
 print(result)
