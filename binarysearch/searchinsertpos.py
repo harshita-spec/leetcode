@@ -10,10 +10,9 @@
 # Explanation: The target value 2 is not found in the array. However, it should be inserted at index 1 to maintain the sorted order of the array.
 
 def searchinsert(arr,target):
-    n=len(arr)
     low=0
-    high=n-1
-    ans=n
+    high=len(arr)-1
+    ans=len(arr)
     while low<=high:
         mid=(low+high)//2
         if arr[mid]>=target:
@@ -24,5 +23,4 @@ def searchinsert(arr,target):
     return ans
 arr=[3,5,8,15,19]
 target=9
-result=searchinsert(arr,target)
-print(result)
+print(searchinsert(arr,target))
