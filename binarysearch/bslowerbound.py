@@ -14,10 +14,9 @@
 # Index 3 is the smallest index such that arr[3] >= x.
 
 def lb(arr,target):
-    n=len(arr)
     low=0
-    high=n-1
-    ans=n
+    high=len(arr)-1
+    ans=len(arr)
     while low<=high:
         mid=(low+high)//2
         if arr[mid]>=target:
