@@ -45,6 +45,45 @@ class SLL:
             i+=1
             temp=temp.next
         return self.head
+
+    def sortLL(self,head):
+        if head is None or head.next is None:
+            return head
+        middle =self.findmiddle(head)
+        leftmid=head
+        rightmid=middle.next
+        middle.next = None
+        leftsorted=self.sortLL(leftmid)
+        rightsorted=self.sortLL(rightmid)
+        return self.merged(leftsorted,rightsorted)
+    
+    def findmiddle(self,head):
+        slow=head
+        fast=head.next
+        while fast is not None and fast.next is not None:
+            slow=slow.next
+            fast=fast.next.next
+        return slow
+    
+    def merged(self,left,right):
+        dummy=Node(-1)
+        temp=dummy
+        while left is not None and right is not None:
+            if left.data<right.data:
+                temp.next=left
+                temp=left
+                left=left.next
+            else:
+                temp.next=right
+                temp=right
+                right=right.next
+
+        if left:
+            temp.next=left
+        else:
+            temp.next=right
+        return dummy.next
+
 n1 = Node(5)
 sll = SLL()
 sll.head = n1
@@ -59,5 +98,6 @@ n4.next = n5
 n6 = Node(4)
 n5.next = n6   
 sll.traversal()
-sll.sortll()
+# sll.sortll()
+sll.head = sll.sortLL(sll.head)
 sll.traversal()
