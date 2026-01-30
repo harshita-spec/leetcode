@@ -29,6 +29,7 @@ class SLL:
                 temp=temp.next
             print("None")
     
+    #brute force
     def sortll(self):
         if self.head is None or self.head .next is None:
             return self.head
@@ -45,7 +46,8 @@ class SLL:
             i+=1
             temp=temp.next
         return self.head
-
+    
+    #optimal
     def sortLL(self,head):
         if head is None or head.next is None:
             return head
