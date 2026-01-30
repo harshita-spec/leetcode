@@ -39,21 +39,37 @@ class SLL:
                 temp=temp.next
             print("None")
     
-    def getIntersectionNode(self,headA,headB):
+    # def getIntersectionNode(self,headA,headB):
+    #     if headA is None or headB is None:
+    #         return None
+    #     mpp={}
+    #     temp=headA
+    #     while temp is not None:
+    #         mpp[temp]=1
+    #         temp=temp.next
+    #     temp=headB
+    #     while temp is not None:
+    #         if temp in mpp:
+    #             return temp
+    #         temp=temp.next
+    #     return None
+    
+    # optimal
+    def intersectionnode(self,headA,headB):
         if headA is None or headB is None:
             return None
-        mpp={}
-        temp=headA
-        while temp is not None:
-            mpp[temp]=1
-            temp=temp.next
-        temp=headB
-        while temp is not None:
-            if temp in mpp:
-                return temp
-            temp=temp.next
-        return None
-
+        t1=headA
+        t2=headB
+        while t1!=t2:
+            t1=t1.next
+            t2=t2.next
+            if t1==t2:
+                return t2
+            if t1==None:
+                t1=headB
+            if t2==None:
+                t2=headA
+        return t1
 
 n4 = Node(4)
 n5 = Node(5)
@@ -74,7 +90,12 @@ listB = SLL()
 listB.head = b1
 listA.traversal()
 listB.traversal()
-intersection = listA.getIntersectionNode(listA.head,listB.head)
+# intersection = listA.getIntersectionNode(listA.head,listB.head)
+# if intersection:
+#     print(intersection.data)
+# else:
+#     print("null")
+intersection = listA.intersectionnode(listA.head,listB.head)
 if intersection:
     print(intersection.data)
 else:
