@@ -43,27 +43,45 @@ class SLL:
             curr=next
         return prev
     
-    def addOne(self,head):
-        head=self.reverse(head)
-        temp=head
-        carry=1
-        while temp is not None:
-            temp.data+=carry
-            if temp.data<10:
-                carry=0
-                break
-            else:
-                temp.data=0
-                carry=1
-            temp=temp.next
+    # def addOne(self,head):
+    #     head=self.reverse(head)
+    #     temp=head
+    #     carry=1
+    #     while temp is not None:
+    #         temp.data+=carry
+    #         if temp.data<10:
+    #             carry=0
+    #             break
+    #         else:
+    #             temp.data=0
+    #             carry=1
+    #         temp=temp.next
+    #     if carry==1:
+    #         newnode=Node(1)
+    #         head=self.reverse(head)
+    #         newnode.next=head
+    #         return newnode
+    #     head=self.reverse(head)
+    #     return head
+    
+    def addone(self,head):
+        carry=self.raddone(head)
         if carry==1:
             newnode=Node(1)
-            head=self.reverse(head)
             newnode.next=head
             return newnode
-        head=self.reverse(head)
         return head
-
+    
+    def raddone(self,temp):
+        if temp==None:
+            return 1
+        carry=self.raddone(temp.next)
+        temp.data+=carry
+        if temp.data<10:
+            return 0
+        else:
+            temp.data=0
+            return 1
 n1=Node(9)
 sll=SLL()
 sll.head=n1
@@ -72,6 +90,7 @@ n3=Node(9)
 n1.next=n2
 n2.next=n3
 sll.traversal()
-sll.head=sll.addOne(sll.head)
+# sll.head=sll.addOne(sll.head)
+sll.head=sll.addone(sll.head)
 sll.traversal()
 
