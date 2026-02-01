@@ -28,14 +28,14 @@
 # Only one valid answer exists.
  
   
-# def twoSum(nums, target):
-#         hash_map = {}
-#         for index, num in enumerate(nums):
-#             complement = target - num
-#             if complement in hash_map:
-#                 return [hash_map[complement], index]
-#             hash_map[num] = index
-#         return []
+def twoSum(nums, target):
+        hash_map = {}
+        for index, num in enumerate(nums):
+            complement = target - num
+            if complement in hash_map:
+                return [hash_map[complement], index]
+            hash_map[num] = index
+        return []
 
 
 def twosum(arr,target):
@@ -55,4 +55,5 @@ def twosum(arr,target):
 
 nums = [3,2,4]
 target = 6
+print(twoSum(nums, target))
 print(twosum(nums,target))
