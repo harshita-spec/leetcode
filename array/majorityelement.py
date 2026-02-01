@@ -12,9 +12,8 @@
 # Explanation: The number 1 appears 4 times in the 6 sized array
 
 def major(arr):
-    n=len(arr)
     count=0
-    for i in range(n):
+    for i in range(len(arr)):
         if count==0:
             count=1
             el=arr[i]
@@ -23,10 +22,10 @@ def major(arr):
         else:
             count-=1
     count1=0
-    for i in range(n):
+    for i in range(len(arr)):
         if arr[i]==el:
             count1+=1
-        if count1>(n/2):
+        if count1>(len(arr)/2):
             return el
     return -1
 arr=[7, 0, 0, 1, 7, 7, 2, 7, 7]
