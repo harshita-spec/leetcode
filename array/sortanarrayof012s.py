@@ -10,10 +10,9 @@
 # Explanation: The nums array in sorted order has 2 zeroes, 3 ones and zero twos
 
 def sortt(arr):
-    n=len(arr)
     low=0
     mid=0
-    high=n-1
+    high=len(arr)-1
     while mid<=high:
         if arr[mid]==0:
             arr[low],arr[mid]=arr[mid],arr[low]
