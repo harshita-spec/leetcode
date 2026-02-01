@@ -12,9 +12,10 @@
 # Explanation: The element on index 0 or index 3 make up the largest sum when taken as a subarray
 import sys
 def kadane(arr):
+    n=len(arr)
     sum=0
     maxi=-sys.maxsize-1
-    for i in range(len(arr)):
+    for i in range(n):
         sum+=arr[i]
         if sum>maxi:
             maxi=sum
