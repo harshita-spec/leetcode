@@ -24,18 +24,17 @@ def findsubarray(arr,k):
 
 #optimal solution
 def getLongestSubarray(a, k):
-    n = len(a) 
     left= right = 0
     Sum = a[0]
     maxLen = 0
-    while right < n:
+    while right < len(a) :
         while left <= right and Sum > k:
             Sum -= a[left]
             left += 1
         if Sum == k:
             maxLen = max(maxLen, right - left + 1)
         right += 1
-        if right < n: 
+        if right < len(a) : 
             Sum += a[right]
     return maxLen
 arr = [10, 5, 2, 7, 1, 9]
