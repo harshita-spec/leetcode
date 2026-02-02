@@ -29,7 +29,7 @@ print(result)
 #optimal
 def longestsubstring(s):
     n=len(s)
-    hash=[0]*256
+    hash=[-1]*256
     left=0
     right=0
     maxlen=0
