@@ -11,20 +11,20 @@
 # Explanation : The answers are "ab" , "bc". Both have maximum length 2.
 
 #brute force
-# def substring(s):
-#     maxlen=0
-#     for i in range(len(s)):
-#         hash=[0]*256
-#         for j in range(i,len(s)):
-#             if hash[ord(s[j])]==1:
-#                 break
-#             leng=j-i+1
-#             maxlen=max(leng,maxlen)
-#             hash[ord(s[j])]=1
-#     return maxlen
-# s="abcddabac"
-# result=substring(s)
-# print(result)
+def substring(s):
+    maxlen=0
+    for i in range(len(s)):
+        hash=[0]*256
+        for j in range(i,len(s)):
+            if hash[ord(s[j])]==1:
+                break
+            leng=j-i+1
+            maxlen=max(leng,maxlen)
+            hash[ord(s[j])]=1
+    return maxlen
+s="abcddabac"
+result=substring(s)
+print(result)
 
 #optimal
 def longestsubstring(s):
