@@ -18,7 +18,8 @@
 #brute 
 def maxones(nums,k):
     maxlen=0
-    for i in range(len(nums)):
+    n=len(nums)
+    for i in range(n):
         zero=0
         for j in range(i,len(nums)):
             if nums[j]==0:
