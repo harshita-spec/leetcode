@@ -29,6 +29,22 @@ def maxones(nums,k):
                 break
     return maxlen
 
+#better
+def maxOnes(nums,k):
+    l=0
+    zero=0
+    maxlen=0
+    for r in range(len(nums)):
+        if nums[r]==0:
+            zero+=1
+        while zero>k:
+            if nums[l]==0:
+                zero-=1
+            l+=1
+        if zero<=k:
+            maxlen=max(maxlen,r-l+1)
+    return maxlen
 nums=[1,1,1,0,0,0,1,1,1,1,0]
-k=2
+k=3
 print(maxones(nums,k))  
+print(maxOnes(nums,k))
