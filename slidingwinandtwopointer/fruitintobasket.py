@@ -51,6 +51,23 @@ def totalfruits(fruits):
         maxlen=max(maxlen,r-l+1)
         r+=1
     return maxlen
+
+#optimal
+def fruitss(fruits):
+    maxlen=0
+    l=0
+    count={}
+    for r in range(len(fruits)):
+        count[fruits[r]]=count.get(fruits[r],0)+1
+        if len(count)>2:
+            count[fruits[l]]-=1
+            if count[fruits[l]]==0:
+                del count[fruits[l]]
+            l+=1
+        maxlen=max(maxlen,r-l+1)
+        r+=1
+    return maxlen
 fruits = [1, 2, 3, 2]
 print(totalFruit(fruits))
 print(totalfruits(fruits))
+print(fruitss(fruits))
