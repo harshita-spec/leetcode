@@ -23,34 +23,34 @@
 # Hence we collected total of 4 fruits.
 
 #brute
-# def totalFruit(fruits):
-#     maxlen=0
-#     for i in range(len(fruits)):
-#         st=set()
-#         for j in range(i,len(fruits)):
-#             st.add(fruits[j])
-#             if len(st)<=2:
-#                 maxlen=max(maxlen,j-i+1)
-#             else:
-#                 break
-#     return maxlen   
+def totalFruit(fruits):
+    maxlen=0
+    for i in range(len(fruits)):
+        st=set()
+        for j in range(i,len(fruits)):
+            st.add(fruits[j])
+            if len(st)<=2:
+                maxlen=max(maxlen,j-i+1)
+            else:
+                break
+    return maxlen   
 
 #better
-# def totalfruits(fruits):
-#     maxlen=0
-#     l=0
-#     r=0
-#     mpp={}
-#     while r<len(fruits):
-#         mpp[fruits[r]]=mpp.get(fruits[r],0)+1
-#         while len(mpp)>2:
-#             mpp[fruits[l]]-=1
-#             if mpp[fruits[l]]==0:
-#                 del mpp[fruits[l]]
-#             l+=1
-#         maxlen=max(maxlen,r-l+1)
-#         r+=1
-#     return maxlen
+def totalfruits(fruits):
+    maxlen=0
+    l=0
+    r=0
+    mpp={}
+    while r<len(fruits):
+        mpp[fruits[r]]=mpp.get(fruits[r],0)+1
+        while len(mpp)>2:
+            mpp[fruits[l]]-=1
+            if mpp[fruits[l]]==0:
+                del mpp[fruits[l]]
+            l+=1
+        maxlen=max(maxlen,r-l+1)
+        r+=1
+    return maxlen
 
 #optimal
 def fruitss(fruits):
@@ -68,6 +68,6 @@ def fruitss(fruits):
         r+=1
     return maxlen
 fruits = [1, 2, 3, 2]
-# print(totalFruit(fruits))
-# print(totalfruits(fruits))
+print(totalFruit(fruits))
+print(totalfruits(fruits))
 print(fruitss(fruits))
