@@ -23,17 +23,17 @@
 # Hence we collected total of 4 fruits.
 
 #brute
-def totalFruit(fruits):
-    maxlen=0
-    for i in range(len(fruits)):
-        st=set()
-        for j in range(i,len(fruits)):
-            st.add(fruits[j])
-            if len(st)<=2:
-                maxlen=max(maxlen,j-i+1)
-            else:
-                break
-    return maxlen   
+# def totalFruit(fruits):
+#     maxlen=0
+#     for i in range(len(fruits)):
+#         st=set()
+#         for j in range(i,len(fruits)):
+#             st.add(fruits[j])
+#             if len(st)<=2:
+#                 maxlen=max(maxlen,j-i+1)
+#             else:
+#                 break
+#     return maxlen   
 
 #better
 def totalfruits(fruits):
@@ -68,6 +68,6 @@ def fruitss(fruits):
         r+=1
     return maxlen
 fruits = [1, 2, 3, 2]
-print(totalFruit(fruits))
+# print(totalFruit(fruits))
 print(totalfruits(fruits))
 print(fruitss(fruits))
