@@ -32,7 +32,7 @@ def fun(arr,mid):
             stu+=1
             pagestu=arr[i]
     return stu
-arr=[1, 2, 3, 4, 5]
+arr=[3,5,1]
 m=3
 result=split(arr,m)
 print(result)
