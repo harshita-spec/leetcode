@@ -33,7 +33,7 @@ def floor(arr,target):
         else:
             high=mid-1
     return ans
-arr=[3, 4, 4, 7, 8, 10]
+arr=[3, 4, 4, 7, 8,9, 10]
 target=5
 print(floor(arr,target))
 print(ceil(arr,target))
