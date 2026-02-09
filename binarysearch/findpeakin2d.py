@@ -34,7 +34,7 @@ def maxele(mat,n,m,mid):
             maxvalue=mat[i][mid]
             index=i
     return index
-matrix=[[10, 7], [11, 17]]
+matrix=[[10, 20, 15], [21, 30, 14], [7, 16, 32]]
 n=len(matrix)
 m=len(matrix[0])
 result=peak(matrix,n,m)
