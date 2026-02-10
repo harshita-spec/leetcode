@@ -17,5 +17,10 @@ def sumofnaturals(n):
     for i in range(n+1):
         sum+=i
     return sum
+
+def summ(n):
+    return (n*(n+1))//2
 n=6
 print(sumofnaturals(n))
+m=5
+print(summ(m))
