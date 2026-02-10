@@ -16,5 +16,11 @@ def sumofsquares(n):
     for i in range(n+1):
         sum+=(i**2)
     return sum
+
+def sumofsquaresformula(n):
+    return (n*(n+1)*(2*n+1))//6
+
 n=8
 print(sumofsquares(n))
+n=5
+print(sumofsquaresformula(n))
