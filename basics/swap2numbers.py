@@ -18,6 +18,11 @@ def swap(a,b):
     a=b
     b=temp
     return a,b
+
+def swap2(a,b):
+    a,b=b,a
+    print("a=",a,"b=",b)
 a=10
 b=20
 print(swap(a,b)) 
+swap2(a,b)
