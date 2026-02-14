@@ -25,6 +25,6 @@ sll=LL()
 sll.head=n1
 n2=Node(10)
 n1.next=n2
-n3=Node(15)
+n3=Node(14)
 n2.next=n3
 sll.traversal()
