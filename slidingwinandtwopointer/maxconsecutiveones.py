@@ -65,7 +65,7 @@ def maxOness(nums,k):
     return maxlen
 
 nums=[1,1,1,0,0,0,1,1,1,1,0]
-k=2
+k=3
 print(maxones(nums,k))  
 print(maxOnes(nums,k))
 print(maxOness(nums,k))
