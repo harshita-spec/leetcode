@@ -39,5 +39,5 @@ def roman(s):
         else:
             res+=roman[s[i]]
     return res
-s = "DCCCX"
+s = "XLII"
 print(roman(s))
