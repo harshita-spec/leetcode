@@ -48,7 +48,7 @@ n3=Node(15)
 n2.next=n3
 n4=Node(25)
 n3.next=n4
-n5=Node(35)
+n5=Node(45)
 n4.next=n5
 sll.traversal()
 sll.middle()
