@@ -34,32 +34,32 @@ class SLL:
                 temp=temp.next
             print("None")
 
-    def sortll(self, head):
-        if head is None or head.next is None:
-            return head
-        count0 = count1 = count2 = 0
-        temp = head
-        while temp:
-            if temp.data == 0:
-                count0 += 1
-            elif temp.data == 1:
-                count1 += 1
-            elif temp.data == 2:
-                count2 += 1
-            temp = temp.next
-        temp = head
-        while temp:
-            if count0 > 0:
-                temp.data = 0
-                count0 -= 1
-            elif count1 > 0:
-                temp.data = 1
-                count1 -= 1
-            else:
-                temp.data = 2
-                count2 -= 1
-            temp = temp.next
-        return head
+    # def sortll(self, head):
+    #     if head is None or head.next is None:
+    #         return head
+    #     count0 = count1 = count2 = 0
+    #     temp = head
+    #     while temp:
+    #         if temp.data == 0:
+    #             count0 += 1
+    #         elif temp.data == 1:
+    #             count1 += 1
+    #         elif temp.data == 2:
+    #             count2 += 1
+    #         temp = temp.next
+    #     temp = head
+    #     while temp:
+    #         if count0 > 0:
+    #             temp.data = 0
+    #             count0 -= 1
+    #         elif count1 > 0:
+    #             temp.data = 1
+    #             count1 -= 1
+    #         else:
+    #             temp.data = 2
+    #             count2 -= 1
+    #         temp = temp.next
+    #     return head
     
     def sortLL(self,head):
         if head is None or head.next is None:
@@ -104,8 +104,8 @@ n5 = Node(0)
 n4.next = n5
 n6 = Node(1)
 n5.next = n6   
-sll.traversal()
-sll.head = sll.sortll(sll.head)
+# sll.traversal()
+# sll.head = sll.sortll(sll.head)
 sll.traversal()
 sll.head = sll.sortLL(sll.head)
 sll.traversal()
