@@ -45,6 +45,6 @@ def upperbound(arr, target):
         else:
             low = mid + 1
     return ans
-matrix = [[1, 3, 8],[2, 3, 4],[1, 2, 5]] 
+matrix = [[1, 4, 9],[2, 5, 6],[3, 7, 8]] 
 result = findMedian(matrix)
 print(result) 
