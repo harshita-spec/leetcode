@@ -45,7 +45,7 @@ def median(a,b):
             low=mid1+1
     return 0
 
-a=[]
-b=[1]
+a=[2, 4, 6]
+b=[1, 3, 5]
 result=median(a,b)
 print(result)
