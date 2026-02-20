@@ -102,7 +102,7 @@ n4 = Node(0)
 n3.next = n4
 n5 = Node(0)
 n4.next = n5
-n6 = Node(1)
+n6 = Node(2)
 n5.next = n6   
 sll.traversal()
 sll.head = sll.sortll(sll.head)
