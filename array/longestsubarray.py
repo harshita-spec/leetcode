@@ -24,7 +24,8 @@ def findsubarray(arr,k):
 
 #optimal solution
 def getLongestSubarray(a, k):
-    left= right = 0
+    left=0
+    right = 0
     Sum = a[0]
     maxLen = 0
     while right < len(a) :
@@ -37,7 +38,7 @@ def getLongestSubarray(a, k):
         if right < len(a) : 
             Sum += a[right]
     return maxLen
-arr = [10, 5, 2, 7, 1, 9]
-k = 15
-print(getLongestSubarray(arr, k))
+arr = [-3, 2, 1]
+k = 3
+# print(getLongestSubarray(arr, k))
 print(findsubarray(arr,k))
