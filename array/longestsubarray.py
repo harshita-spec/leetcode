@@ -40,5 +40,5 @@ def getLongestSubarray(a, k):
     return maxLen
 arr = [-3, 2, 1]
 k = 3
-# print(getLongestSubarray(arr, k))
+print(getLongestSubarray(arr, k))
 print(findsubarray(arr,k))
