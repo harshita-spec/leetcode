@@ -18,5 +18,5 @@ def factorial(self, n: int) -> int:
         for i in range(n,0,-1):
             fact=fact*i
         return fact
-n=5
+n=10
 print(factorial(0,n))
