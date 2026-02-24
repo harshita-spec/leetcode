@@ -31,6 +31,6 @@ def maxScore(cp, k):
         rind=rind-1
     return maxsum
 cardScore=[5, 4, 1, 8, 7, 1, 6 ]
-k=3
+k=2
 result=maxScore(cardScore,k)
 print(result)
