@@ -18,15 +18,22 @@
 # 62 + 82 = 100
 # 12 + 02 + 02 = 1
 
-def isHappy(n):
-    sum=0
+def sumofsq(n):
+    sum1=0
     while n>0:
         digit=n%10
-        sum+=digit*digit
-        if sum==1:
+        digit=digit**2
+        sum1+=digit
+        n=n//10
+    return sum1
+def ishappy(n):
+    visit=set()
+    while n not in visit:
+        visit.add(n)
+        n=sumofsq(n)
+        if n==1:
             return True
-        else:
-            return isHappy(sum)
+    return False
         
-n=19
-print(isHappy(n))
+n=2
+print(ishappy(n))
