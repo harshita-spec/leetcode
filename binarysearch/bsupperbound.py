@@ -21,5 +21,5 @@ def ub(arr,target):
             low=mid+1
     return ans
 arr=[1,2,2,3]
-target=2
+target=4
 print(ub(arr,target))
