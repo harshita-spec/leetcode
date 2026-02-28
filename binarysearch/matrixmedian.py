@@ -15,7 +15,6 @@ def findMedian(matrix):
     low = min(row[0] for row in matrix)
     high = max(row[-1] for row in matrix)
     req = (n * m) // 2
-
     while low <= high:
         mid = (low + high) // 2
         smallerequals = countLessEqual(matrix, mid, n)
@@ -25,13 +24,11 @@ def findMedian(matrix):
             high = mid - 1
     return low
 
-
 def countLessEqual(matrix, target, n):
     count = 0
     for i in range(n):
         count += upperbound(matrix[i], target)
     return count
-
 
 def upperbound(arr, target):
     n = len(arr)
@@ -45,6 +42,7 @@ def upperbound(arr, target):
         else:
             low = mid + 1
     return ans
-matrix = [[1, 4, 9],[2, 5, 6],[3, 7, 8]] 
+
+matrix = [[1, 3, 8],[2, 3, 4],[1, 2, 5]] 
 result = findMedian(matrix)
 print(result) 
