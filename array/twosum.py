@@ -34,9 +34,9 @@ print(Twosum(nums,target))
 def twoSum(nums, target):
         hash_map = {}
         for index, num in enumerate(nums):
-            complement = target - num
-            if complement in hash_map:
-                return [hash_map[complement], index]
+            com = target - num
+            if com in hash_map:
+                return [hash_map[com], index]
             hash_map[num] = index
         return []
 
