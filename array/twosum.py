@@ -48,12 +48,30 @@ def twosum(arr,target):
     while left<right:
         sum=arr1[left]+arr1[right]
         if sum==target:
-            return "yes"
+            return "true"
         elif sum<target:
             left+=1
         else:
             right-=1
     return "no"
+
+def twosumm(arr, target):
+    arr= [(val, i) for i, val in enumerate(arr)]
+    arr.sort()
+    left = 0
+    right = len(arr) - 1
+    while left < right:
+        s = arr[left][0] + arr[right][0]
+        if s == target:
+            return [arr[left][1], arr[right][1]]
+        elif s < target:
+            left += 1
+        else:
+            right -= 1
+    return [-1, -1]
+arr = [3,2,4]
+target = 6
+print(twosumm(arr, target))
 
 nums = [3,2,4]
 target = 6
