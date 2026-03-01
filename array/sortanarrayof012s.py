@@ -9,6 +9,28 @@
 # Output: [0, 0, 1, 1, 1]
 # Explanation: The nums array in sorted order has 2 zeroes, 3 ones and zero twos
 
+def Sortt(arr):
+    count0=0
+    count1=0
+    count2=0
+    for i in range(len(arr)):
+        if arr[i]==0:
+            count0+=1
+        elif arr[i]==1:
+            count1+=1
+        else:
+            count2+=1
+    for i in range(count0):
+        arr[i]=0
+    for i in range(count0,count0+count1):
+        arr[i]=1
+    for i in range(count0+count1,len(arr)):
+        arr[i]=2
+    return arr
+nums = [1, 0, 2, 1, 0] 
+result = Sortt(nums)
+print(result)
+
 def sortt(arr):
     low=0
     mid=0
