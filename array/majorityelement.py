@@ -11,6 +11,21 @@
 # Output: 1
 # Explanation: The number 1 appears 4 times in the 6 sized array
 
+def Majority(arr):
+    hash_map={}
+    for i in range(len(arr)):
+        if arr[i] in hash_map:
+            hash_map[arr[i]]+=1
+        else:
+            hash_map[arr[i]]=1
+    for key in hash_map:
+        if hash_map[key]>len(arr)/2:
+            return key
+    return -1
+arr=[7, 0, 0, 1, 7, 7, 2, 7, 7]
+result=Majority(arr)
+print(result)
+
 def major(arr):
     count=0
     for i in range(len(arr)):
