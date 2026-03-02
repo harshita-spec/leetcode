@@ -25,6 +25,19 @@ arr=[2, 3, 5, -2, 7, -4]
 result=maximum(arr)
 print(result)
 
+def Maximumsum(arr):
+    n=len(arr)
+    maxi=-float('inf')
+    for i in range(len(arr)):
+        sum=0
+        for j in range(i,len(arr)):
+            sum+=arr[j]
+            maxi=max(sum,maxi)
+    return maxi
+arr=[2, 3, 5, -2, 7, -4]
+result=Maximumsum(arr)
+print(result)
+
 import sys
 def kadane(arr):
     n=len(arr)
