@@ -44,17 +44,17 @@ def major(arr):
     for i in range(len(arr)):
         if count==0:
             count=1
-            el=arr[i]
-        elif arr[i]==el:
+            ele=arr[i]
+        elif arr[i]==ele:
             count+=1
         else:
             count-=1
     count1=0
     for i in range(len(arr)):
-        if arr[i]==el:
+        if arr[i]==ele:
             count1+=1
         if count1>(len(arr)/2):
-            return el
+            return ele
     return -1
 arr=[7, 0, 0, 1, 7, 7, 2, 7, 7]
 result=major(arr)
