@@ -52,3 +52,23 @@ def kadane(arr):
 arr=[2, 3, 5, -2, 7, -4]
 result=kadane(arr)
 print(result)
+
+def kadanes(arr):
+    sum=0
+    maxi=-float('inf')
+    ansstart=0
+    ansend=0
+    for i in range(len(arr)):
+        if sum==0:
+            start=i
+        sum+=arr[i]
+        if sum>maxi:
+            maxi=sum
+            ansstart=start
+            ansend=i
+        if sum<0:
+            sum=0
+    return ansstart,ansend
+arr=[2, 3, 5, -2, 7, -4]
+result=kadanes(arr)
+print(result)
