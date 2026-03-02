@@ -38,7 +38,6 @@ arr=[2, 3, 5, -2, 7, -4]
 result=Maximumsum(arr)
 print(result)
 
-import sys
 def kadane(arr):
     n=len(arr)
     sum=0
