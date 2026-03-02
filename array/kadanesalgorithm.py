@@ -42,7 +42,7 @@ import sys
 def kadane(arr):
     n=len(arr)
     sum=0
-    maxi=-sys.maxsize-1
+    maxi=-float('inf')
     for i in range(n):
         sum+=arr[i]
         if sum>maxi:
@@ -50,7 +50,6 @@ def kadane(arr):
         if sum<0:
             sum=0
     return maxi
-
 arr=[2, 3, 5, -2, 7, -4]
 result=kadane(arr)
 print(result)
