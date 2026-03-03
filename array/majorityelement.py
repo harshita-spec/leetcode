@@ -53,10 +53,10 @@ def major(arr):
     for i in range(len(arr)):
         if arr[i]==ele:
             count1+=1
-        if count1>(len(arr)/2):
-            return ele
+    if count1>(len(arr)/2):
+        return ele
     return -1
-arr=[7, 0, 0, 1, 7, 7, 2, 7, 7]
+arr=[7, 0, 0, 1, 6, 2, 7, 7]
 result=major(arr)
 print(result)
 
