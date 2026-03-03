@@ -20,11 +20,11 @@
 def stock(arr):
     mini=arr[0]
     profit=0
-    for i in range(len(arr)):
+    for i in range(1,len(arr)):
         cost=arr[i]-mini
         profit=max(profit,cost)
         mini=min(mini,arr[i])
     return profit
-arr=[7,1,5,3,6,4]
+arr=[7,1,5,6,4]
 result=stock(arr)
 print(result)
