@@ -13,6 +13,23 @@
 # Output : [1, -1, 2, -3, 3, -4]
 # Explanation: The positive number 1, 2, 3 maintain their relative positions and -1, -3, -4 maintain their relative positions
 
+def rearrangearray(arr):
+    n=len(arr)
+    neg=[]
+    pos=[]
+    for i in range(len(arr)):
+        if arr[i]<0:
+            neg.append(arr[i])
+        else:
+            pos.append(arr[i])
+    for i in range(n//2):
+        arr[2*i]=pos[i]
+        arr[2*i+1]=neg[i]
+    return arr
+arr=[3,-2,4,5,9,-4,-1,-8]
+result=rearrangearray(arr)
+print(result)
+
 def rearrange(arr):
     n=len(arr)
     neg=[]
