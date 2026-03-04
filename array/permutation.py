@@ -17,7 +17,7 @@
 # Output: [1,2,3]
 # Explanation: [3,2,1] is the last permutation. So we return the first: [1,2,3].
 
-def nextGreaterPermutation(A):
+def Permutation(A):
     n = len(A) 
     ind = -1 
     for i in range(n-2, -1, -1):
@@ -35,8 +35,7 @@ def nextGreaterPermutation(A):
     return A
 
 A = [2, 1, 5, 4, 3, 0, 0]
-ans = nextGreaterPermutation(A)
-print("The next permutation is: [", end="")
+ans = Permutation(A)
 for it in ans:
     print(it, end=" ")
 print("]")
