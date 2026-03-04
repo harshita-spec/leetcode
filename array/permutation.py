@@ -38,4 +38,4 @@ A = [2, 1, 5, 4, 3, 0, 0]
 ans = Permutation(A)
 for it in ans:
     print(it, end=" ")
-print("]")
+print("")
