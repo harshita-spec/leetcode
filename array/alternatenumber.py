@@ -19,7 +19,6 @@ def alternate(arr):
     n = len(arr)
     neg = []
     pos = []
-
     for num in arr:
         if num >= 0: 
             pos.append(num)
