@@ -25,7 +25,7 @@ def alternate(arr):
         else:
             neg.append(num)
     if len(pos) > len(neg):
-        for i in range(len(neg)):
+        for i in range(len(neg)): 
             arr[2*i] = pos[i]
             arr[2*i+1] = neg[i]
         index = 2 * len(neg)
