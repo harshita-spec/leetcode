@@ -12,6 +12,21 @@
 # Output: [5, 1, -4, -5]
 # Explanation: -5 is the rightmost element, -4 is the largest element in the index range [4, 5], 1 is the largest element in the index range [3, 5] and 5 is the largest element in the range [2, 5]
 
+def Leader(arr):
+    ans=[]
+    for i in range(len(arr)):
+        leaders=True
+        for j in range(i+1,len(arr)):
+            if arr[i]<arr[j]:
+                leaders=False
+                break
+        if leaders==True:
+            ans.append(arr[i])
+    return ans
+arr=[10,22,12,3,0,6]
+result=Leader(arr)
+print(result)
+
 def leader(arr):
     ans=[]
     maxi=-float('inf')
