@@ -14,13 +14,12 @@
 
 def leader(arr):
     ans=[]
-    maxi=arr[len(arr)-1]
-    ans.append(arr[len(arr)-1])
+    maxi=-float('inf')
     for i in range(len(arr)-1,-1,-1):
         if arr[i]>maxi:
             ans.append(arr[i])
-            maxi=arr[i]
-    return ans
+        maxi=max(maxi,arr[i])
+    return sorted(ans)
 arr=[10,22,12,3,0,6]
 result=leader(arr)
 print(result)
