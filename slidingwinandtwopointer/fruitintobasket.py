@@ -67,7 +67,7 @@ def fruitss(fruits):
         maxlen=max(maxlen,r-l+1)
         r+=1
     return maxlen
-fruits = [1, 2, 3, 2]
+fruits = [1, 2, 3, 2,5,6]
 print(totalFruit(fruits))
 print(totalfruits(fruits))
 print(fruitss(fruits))
