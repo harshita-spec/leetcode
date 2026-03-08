@@ -32,5 +32,5 @@ def average(salary):
     totalsum = totalsal - maxsal - minsal
     return totalsum / (n - 2)
 
-salary = [4000, 3000, 1000, 2000]
+salary = [4000, 3000, 1000, 2000 ,3005]
 print(average(salary))
