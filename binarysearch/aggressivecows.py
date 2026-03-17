@@ -32,7 +32,7 @@ def cwp(arr,dist,cows):
     if cntcow>=cows:
         return True
     return False
-arr=[4, 2, 1, 3, 6]
+arr=[4, 2, 1, 3, 6,5]
 cows=2
 result=cow(arr,cows)
 print(result)
