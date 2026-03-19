@@ -97,7 +97,7 @@ arr1=[1,3,5,7]
 arr2=[0,2,6,8,9]
 n=len(arr1)
 m=len(arr2)
-result= merged(arr1,arr2,n,m)
+merged(arr1,arr2,n,m)
 print("arr1[] = ", end="")
 for i in range(n):              
     print(arr1[i], end=" ") 
