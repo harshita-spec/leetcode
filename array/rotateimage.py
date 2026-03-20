@@ -15,8 +15,16 @@ def rotate(matrix):
         for j in range(i, n):
             matrix[i][j], matrix[j][i] = matrix[j][i], matrix[i][j]
     for i in range(n):
-        matrix[i].reverse()
+        rev(matrix[i])
     return matrix
+def rev(arr):
+    l=0
+    r=len(arr)-1
+    while l<r:
+        arr[l],arr[r]=arr[r],arr[l]
+        l+=1
+        r-=1
 matrix = [[1,2,3],[4,5,6],[7,8,9]]
 ans = rotate(matrix)
 print(ans)
+
