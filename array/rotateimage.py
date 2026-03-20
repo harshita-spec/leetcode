@@ -18,8 +18,8 @@ def matrotate(matrix):
             ans[j][n-1-i] = matrix[i][j]
     return ans
 matrix = [[1,2,3],[4,5,6],[7,8,9]]
-ans = matrotate(matrix)
-print(ans)      
+print(matrotate(matrix))
+   
 
 #optimal 
 def rotate(matrix):
