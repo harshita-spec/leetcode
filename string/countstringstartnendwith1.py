@@ -22,3 +22,4 @@ def countsubstrings(s):
     return count
 s="00100101"
 print(countsubstrings(s))
+
