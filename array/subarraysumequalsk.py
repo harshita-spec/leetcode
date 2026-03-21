@@ -27,6 +27,20 @@ arr = [3, 1, 2, 4,7]
 k = 6
 print(sumofk(arr,k))
 
+#better 
+def sumofeqk(arr,k):
+    count=0
+    for i in range(len(arr)):
+        sum=0
+        for j in range(i,len(arr)):
+            sum+=arr[j]
+            if sum==k:
+                count+=1
+    return count
+arr = [3, 1, 2, 4,7]
+k = 6
+print(sumofeqk(arr,k))  
+
 #optimal
 from collections import defaultdict
 def findAllSubarraysWithGivenSum(arr, k):
