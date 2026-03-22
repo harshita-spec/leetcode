@@ -18,6 +18,10 @@ def nCr(n, r):
         res = res // (i + 1)
     return int(res)
 
+n=5
+r=3
+print(nCr(n, r))
+
 def pascalTriangle(n):
     ans = []
     for row in range(1, n+1):
