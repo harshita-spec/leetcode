@@ -17,20 +17,24 @@
 # Note that we have used two -1s as they are separate elements with different indexes
 # But we have not used the -1 at index 4 as that would create a duplicate triplet
 
-# def triplet(n, arr):
-#     st = set()
+def triplet(n, arr):
+    st = set()
 
-#     for i in range(n):
-#         hashset = set()
-#         for j in range(i + 1, n):
-#             third = -(arr[i] + arr[j])
-#             if third in hashset:
-#                 temp = [arr[i], arr[j], third]
-#                 temp.sort()
-#                 st.add(tuple(temp))
-#             hashset.add(arr[j])
-#     ans = list(st)
-#     return ans
+    for i in range(n):
+        hashset = set()
+        for j in range(i + 1, n):
+            third = -(arr[i] + arr[j])
+            if third in hashset:
+                temp = [arr[i], arr[j], third]
+                temp.sort()
+                st.add(tuple(temp))
+            hashset.add(arr[j])
+    ans = list(st)
+    return ans
+arr=[2, -1, -1, 3, -1]
+n=len(arr)
+ans = triplet(n, arr)
+print(ans)
 
 #optimal
 def sum(arr):
