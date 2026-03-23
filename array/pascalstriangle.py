@@ -30,7 +30,7 @@ def pascalTriangle(n):
             tempLst.append(nCr(row - 1, col - 1))
         ans.append(tempLst)
     return ans
-n = int(input("number:"))
+n = 10
 ans = pascalTriangle(n)
 for it in ans:
     for ele in it:
