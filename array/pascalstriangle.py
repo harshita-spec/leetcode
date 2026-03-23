@@ -20,7 +20,20 @@ def nCr(n, r):
 
 n=5
 r=3
-print(nCr(n, r))
+print(nCr(n-1, r-1))
+print()
+
+def pascalrow(N):
+    row = []
+    val = 1
+    row.append(val)
+    for k in range(1, N):
+        val = val * (N - k) // k
+        row.append(val)
+    return row
+n=6
+print(pascalrow(n))
+print()
 
 def pascalTriangle(n):
     ans = []
@@ -30,9 +43,23 @@ def pascalTriangle(n):
             tempLst.append(nCr(row - 1, col - 1))
         ans.append(tempLst)
     return ans
-n = 10
+n = 6
 ans = pascalTriangle(n)
 for it in ans:
     for ele in it:
         print(ele, end=" ")
     print()
+
+
+def getNthRow(N):  
+        row = []
+        val = 1
+        row.append(val)
+        for k in range(1, N):
+            val = val * (N - k) // k
+            row.append(val)
+        
+        return row
+N=6
+result = getNthRow(N)
+print(*result)
