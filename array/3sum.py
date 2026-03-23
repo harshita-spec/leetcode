@@ -19,7 +19,6 @@
 
 def triplet(n, arr):
     st = set()
-
     for i in range(n):
         hashset = set()
         for j in range(i + 1, n):
@@ -41,8 +40,7 @@ def sum(arr):
     ans=[]
     arr=sorted(arr)
     for i in range(len(arr)):
-        if i>0 and arr[i]==arr[i-1]:
-            continue
+        if i>0 and arr[i]==arr[i-1]:continue
         j=i+1
         k=len(arr)-1
         while j<k:
@@ -61,7 +59,6 @@ def sum(arr):
                 while j<k and arr[k]==arr[k+1]:
                     k-=1
     return ans
-
 arr = [2, -1, -1, 3, -1]
 ans = sum(arr) 
 print(ans)
