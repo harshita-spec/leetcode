@@ -12,6 +12,27 @@
 # Input: nums = [2,2,2,2,2], target = 8
 # Output: [[2,2,2,2]]
 
+#better
+def sum4(arr,n):
+    st=set()
+    for i in range(n):
+        for j in range(i+1,n):
+            hashset=set()
+            for k in range(j+1,n):
+                fourth=-(arr[i]+arr[j]+arr[k])
+                if fourth in hashset:
+                    temp=[arr[i],arr[j],arr[k],fourth]
+                    temp.sort()
+                    st.add(tuple(temp))
+                hashset.add(arr[k])
+    ans=list(st)
+    return ans
+arr=[1,0,-1,0,-2,2]     
+n=len(arr)
+ans = sum4(arr,n)
+print(ans)
+
+#optimal 
 def sum(arr,target):
     ans=[]
     arr=sorted(arr)
