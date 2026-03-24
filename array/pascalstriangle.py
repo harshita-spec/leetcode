@@ -51,15 +51,3 @@ for it in ans:
     print()
 
 
-def getNthRow(N):  
-        row = []
-        val = 1
-        row.append(val)
-        for k in range(1, N):
-            val = val * (N - k) // k
-            row.append(val)
-        
-        return row
-N=6
-result = getNthRow(N)
-print(*result)
