@@ -5,7 +5,8 @@ class queues:
         self.end=-1
         self.cursize=0
         self.size=size
-
+    
+    #append a element at the end of the queue and increase the size of queue by 1
     def push(self,data):
         if self.cursize==self.size:
             print("queue overflow")
@@ -17,6 +18,7 @@ class queues:
         self.q[self.end]=data
         self.cursize+=1
     
+    #remove the front element of the queue and decrease the size of queue by 1
     def pop(self):
         if self.cursize==0:
             print("queue underflow")
@@ -28,15 +30,18 @@ class queues:
         self.cursize-=1
         return el
         
+    #return the front element of the queue without removing it
     def top(self):
         if self.cursize==0:
             print("queue underflow")
         else:
             return self.q[self.front]
         
+    #return the current size of the queue
     def sizeofst(self):
         return self.cursize
-        
+
+    #print the elements of the queue from front to end 
     def printst(self):
         for i in range(self.cursize):
             print(self.q[i],end=" ")
