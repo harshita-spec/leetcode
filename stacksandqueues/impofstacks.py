@@ -25,14 +25,25 @@ class stacks:
         else:
             return self.st[self.top]
         
+    def sizeofst(self):
+        return self.top+1
+        
+    def printst(self):
+        for i in range(self.top+1):
+            print(self.st[i],end=" ")
+        print()
+
 s=stacks(5)
 s.push(10)
 s.push(20)  
 s.push(30)
 s.push(40)
-s.push(50)              
+s.push(50)   
+print("size:",s.sizeofst()) 
+s.printst()          
 print(s.pop())
 print("top:",s.peek())
 print(s.pop())
 print("top:",s.peek())
 print(s.pop())  
+print("size:",s.sizeofst())
