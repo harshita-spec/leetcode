@@ -9,6 +9,13 @@ class LinkedListStack:
         self.head = None  
         self.size = 0  
 
+    def traversal(self):
+        temp=self.head
+        while temp:
+            print(temp.val,end="->")
+            temp=temp.next
+        print("None")
+
     # Method to push an element onto the stack
     def push(self, x):
         element = Node(x)
@@ -43,6 +50,7 @@ st.push(20)
 st.push(30)
 st.push(40)
 st.push(50)
+st.traversal()
 print("size:", st.size)
 print("top:", st.top())
 print(st.pop())
