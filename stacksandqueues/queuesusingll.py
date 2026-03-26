@@ -10,6 +10,13 @@ class LinkedListQueue:
         self.start = self.end = None  
         self.size = 0  
 
+    def traversal(self):
+        temp=self.start
+        while temp:
+            print(temp.val,end="->")
+            temp=temp.next
+        print("None")
+
     # Method to push an element in the queue
     def push(self, x):
         element = Node(x)
@@ -46,6 +53,7 @@ q.push(20)
 q.push(30)
 q.push(40)
 q.push(50)
+q.traversal()
 print("size:", q.size)
 print("front:", q.peek())
 print(q.pop())
