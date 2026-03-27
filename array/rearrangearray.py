@@ -44,6 +44,6 @@ def rearrange(arr):
             posind+=2
     return ans
 
-arr=[3,-2,4,5,9,-4,-1,-8]
+arr=[3,-2,4,5,9,-4,-1]
 result=rearrange(arr)
 print(result)
