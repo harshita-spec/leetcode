@@ -96,6 +96,8 @@ class Stackqueue:
 
     def isEmpty(self) :
         return not self.input and not self.output
+    
+print()
 q = Stackqueue()
 q.push(1)
 q.push(2)
