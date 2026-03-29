@@ -32,7 +32,7 @@ class StackQueue:
         for i in self.st1:
             print(i,end=" ")
         print()
-        
+
     def push(self, x):
         while self.st1:
             self.st2.append(self.st1.pop())
@@ -66,3 +66,42 @@ q.traversal()
 print(q.peek())
 print(q.pop())
 print(q.is_empty())
+
+
+class Stackqueue:
+    def __init__(self):
+        self.input = []  
+        self.output = [] 
+
+    def push(self, x):
+        self.input.append(x)
+
+    def pop(self):
+        if not self.output:
+            while self.input:
+                self.output.append(self.input.pop())
+        if not self.output:
+            print("Queue is empty, cannot pop.")
+            return -1
+        return self.output.pop()
+
+    def peek(self):
+        if not self.output:
+            while self.input:
+                self.output.append(self.input.pop())
+        if not self.output:
+            print("Queue is empty, cannot peek.")
+            return -1
+        return self.output[-1]
+
+    def isEmpty(self) :
+        return not self.input and not self.output
+q = Stackqueue()
+q.push(1)
+q.push(2)
+q.push(3)
+q.push(4)
+q.push(5)
+print(q.peek())
+print(q.pop())
+print(q.isEmpty())
