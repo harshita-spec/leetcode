@@ -24,3 +24,40 @@
 # myStack.pop(); // return 2
 # myStack.empty(); // return False
 
+from queue import Queue
+class QueueStack:
+    def __init__(self):
+        self.q = Queue()
+
+    def traversal(self):
+        for i in self.q.queue:
+            print(i,end=" ")
+        print()
+
+    def push(self, x):
+        s = self.q.qsize()
+        self.q.put(x)
+        for _ in range(s):
+            self.q.put(self.q.get())
+
+    def pop(self):
+        n = self.q.queue[0]
+        self.q.get()
+        return n
+
+    def top(self):
+        return self.q.queue[0]
+
+    def isEmpty(self):
+        return self.q.empty()
+    
+st=QueueStack()
+st.push(1)
+st.push(2)
+st.push(3)
+st.push(4)
+st.push(5)
+st.traversal()
+print(st.top())
+print(st.pop())
+print(st.isEmpty())
