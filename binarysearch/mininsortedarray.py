@@ -14,7 +14,6 @@ def mini(arr):
     for i in range(len(arr)-1):
         if arr[i]<ans:
             ans=arr[i]
-    
     return ans
 arr=[4, 5, 6, 7, 1, 2, 3]
 result=mini(arr)
