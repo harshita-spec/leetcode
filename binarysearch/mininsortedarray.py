@@ -9,6 +9,17 @@
 # Output: 1
 # Explanation:Here, the element 1 is the minimum element in the array.
 
+def mini(arr):
+    ans=float('inf')
+    for i in range(len(arr)-1):
+        if arr[i]<ans:
+            ans=arr[i]
+    
+    return ans
+arr=[4, 5, 6, 7, 1, 2, 3]
+result=mini(arr)
+print(result)
+
 def minimum(arr):
     n=len(arr)
     low=0
