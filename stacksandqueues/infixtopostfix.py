@@ -27,5 +27,5 @@ def infixToPostfix(s):
     while st:
         res += st.pop()
     print(res)
-s = "a+b*(c^d-e)^(f+g*h)-i"
+s = "((a+b)*(c-d)+e)"
 infixToPostfix(s)
