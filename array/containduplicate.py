@@ -24,3 +24,13 @@ def dup(arr):
     return False
 nums = [1,1,1,3,3,4,3,2,4,2]
 print(dup(nums))
+
+def containdup(arr):
+    s = set()
+    for i in arr:
+        if i in s:
+            return True
+        s.add(i)
+    return False
+arr=[1,3,5,6,2,6]
+print(containdup(arr))
