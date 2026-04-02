@@ -23,6 +23,6 @@ def shuffle(nums, n):
         ans[index] = nums[i + n]
         index += 1
     return ans
-nums = [2,5,1,3,4,7,8,9,10,11,12,13]
-n = 3           
+nums = [2,5,1,3,4,7,8,9]
+n = 4          
 print(shuffle(nums, n))
