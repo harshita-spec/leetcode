@@ -20,11 +20,11 @@ def maxsum(arr,k):
         sum1+=arr[i]
     maxsum=sum1
     for i in range(k,len(arr)):
-        sum1=sum1+arr[i]-arr[k-i]
+        sum1=sum1+arr[i]-arr[i-k]
         maxsum=max(sum1,maxsum)
     return maxsum
-arr=[1, 4, 2, 10, 23, 3,1, 0, 20]
-k=4
+arr=[100, 200, 300, 400]
+k=2
 print(maxsum(arr,k))
 
     
