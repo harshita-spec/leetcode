@@ -29,3 +29,24 @@ def minsubarray(target,nums):
 target = 4
 nums = [1,4,4]
 print(minsubarray(target,nums))
+
+def minsubarray2(target,nums):
+        mini=float('inf')
+        left=0
+        right = 0
+        cursum=0
+        while right<len(nums) :
+            cursum += nums[right]
+            while cursum >= target:
+                mini =min(mini,right-left+1)
+                cursum-=nums[left]
+                left+=1
+            right+=1
+        if mini != float('inf'):
+            return mini
+        else:
+            return 0    
+        
+target = 4
+nums = [1,4,4]
+print(minsubarray2(target,nums))
