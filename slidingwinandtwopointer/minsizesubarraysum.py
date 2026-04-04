@@ -47,6 +47,6 @@ def minsubarray2(target,nums):
         else:
             return 0    
         
-target = 4
-nums = [1,4,4]
+target = 5
+nums = [1,4,4,2,4]
 print(minsubarray2(target,nums))
