@@ -59,6 +59,6 @@ def sum(arr):
                 while j<k and arr[k]==arr[k+1]:
                     k-=1
     return ans
-arr = [2, -1, -1, 3, -1]
+arr = [2, -1, -1, 3, -1,-1]
 ans = sum(arr) 
 print(ans)
