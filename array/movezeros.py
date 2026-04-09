@@ -36,6 +36,6 @@ def move0(arr):
             arr[i],arr[j]=arr[j],arr[i]
             j+=1
     return arr
-arr=[0, 0, 0,0, 1, 3, -2]
+arr=[0, 0, 0, 0, 1, 3, -2]
 print(move0(arr))
 print(move00(arr))
