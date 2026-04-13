@@ -32,5 +32,5 @@ def containdup(arr):
             return True
         s.add(i)
     return False
-arr=[1,3,5,6,2,6]
+arr=[1,3,5,6,2,6,7]
 print(containdup(arr))
