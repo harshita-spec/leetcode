@@ -35,6 +35,6 @@ def leader(arr):
             ans.append(arr[i])
         maxi=max(maxi,arr[i])
     return sorted(ans)
-arr=[10,22,12,3,0,6,10]
+arr=[10,22,12,3,0,6]
 result=leader(arr)
 print(result)
