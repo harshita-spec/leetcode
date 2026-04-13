@@ -41,6 +41,6 @@ def alternate(arr):
             arr[index] = neg[i]
             index += 1           
     return arr
-arr = [-5, -2, 5, 2, 4, 7, 1, 8, 0, -8]
+arr = [-5, -2, 5, 2, 4, 7, 1, 8, 0, -8,6]
 result = alternate(arr)
 print(result)
