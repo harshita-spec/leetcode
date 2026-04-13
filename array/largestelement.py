@@ -22,7 +22,7 @@ def num(arr,n):
             if arr[i]<largest and arr[i]>slargest:
                 slargest=arr[i]
     return slargest
-arr=[1,4,3,6,18,9]
+arr=[1,4,3,6,18,9,7]
 n=len(arr)
 result=num(arr,n)
 print(result)
