@@ -37,6 +37,6 @@ def f(n):
         else:
             high=mid-1
     return ans
-n=9
+n=18
 result=f(n)
 print(result)
