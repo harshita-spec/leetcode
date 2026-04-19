@@ -39,8 +39,8 @@ def countofstation(arr, mid):
     return count
 
 
-arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+arr = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
 n = len(arr)
-k = 4
+k = 9
 result = gasstation(arr, n, k)
 print(round(result, 6))
