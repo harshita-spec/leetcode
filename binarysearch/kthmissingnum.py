@@ -23,7 +23,7 @@ def f(arr,k):
         else:
             high=mid-1
     return high+1+k
-arr=[1,2,3,4,7,11]
+arr=[1,2,3,4,7,11,13,14,15]
 k=6
 result=f(arr,k)
 print(result)
