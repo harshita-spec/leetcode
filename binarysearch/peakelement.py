@@ -33,7 +33,7 @@ def f(arr,n):
         else:
             high=mid-1
     return -1
-arr=[1, 2, 1, 3, 5, 6, 4,1]
+arr=[1, 2, 1, 3, 5, 6, 4,1,6]
 n=len(arr)
 result=f(arr,n)
 print(result)
