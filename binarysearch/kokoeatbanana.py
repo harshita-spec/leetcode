@@ -10,7 +10,26 @@
 # Input: n = 5, nums = [25, 12, 8, 14, 19], h = 5
 # Output: 25
 # Explanation: If Koko eats 25 bananas/hr, he will take 1, 1, 1, 1, and 1 hour to eat the piles accordingly. So, he will take 5 hours to complete all the piles.
+
 import math
+def BS(arr,h):
+    for i in range(1,max(arr)+1):
+        ans=fun(arr,i)
+        if ans<=h:
+            return i
+    return -1
+def fun(arr,hr):
+    thr=0
+    for i in arr:
+        thr+=math.ceil(i/hr)
+    return thr
+arr=[7, 15, 6, 3, 11]
+h=8
+result=BS(arr,h)
+print(result)
+
+
+
 def bs(arr,h):
     low=1
     ans=float('inf')
