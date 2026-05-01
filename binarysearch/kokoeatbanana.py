@@ -35,7 +35,7 @@ def fun(arr,hr):
     for i in arr:
         thr+=math.ceil(i/hr)
     return thr
-arr=[7, 15, 6, 3]
+arr=[7, 15, 6, 3, 11]
 h=8
 result=bs(arr,h)
 print(result)
