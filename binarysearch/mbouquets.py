@@ -38,7 +38,7 @@ def possible(arr,mid,m,k):
             count=0
     b+=(count//k)
     return b>=m  
-arr=nums = [1, 10, 3, 10, 2]
+arr=nums = [7, 7, 7, 7, 13, 11, 12, 7]
 m = 3
 k = 2
 result=bs(arr,m,k)
