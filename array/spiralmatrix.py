@@ -8,7 +8,7 @@
 # 		      { 9, 10, 11, 12 },
 # 	              { 13, 14, 15, 16 } }
 
-# Outhput: 1, 2, 3, 4, 8, 12, 16, 15, 14, 13, 9, 5, 6, 7, 11, 10.
+# Output: 1, 2, 3, 4, 8, 12, 16, 15, 14, 13, 9, 5, 6, 7, 11, 10.
 # Explanation: The output of matrix in spiral form.
 
 # Example 2:
@@ -43,8 +43,9 @@ def Spiral(mat):
                 ans.append(mat[i][left])
             left += 1
     return ans
-mat =  [[1, 2, 3],
-        [4, 5, 6],
-        [7, 8, 9]]           
+mat =  [ [ 1, 2, 3, 4 ],
+ 		      [ 5, 6, 7, 8 ],
+		      [ 9, 10, 11, 12 ],
+              [ 13, 14, 15, 16 ] ]          
 ans = Spiral(mat)
 print(ans)
