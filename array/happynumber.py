@@ -35,5 +35,5 @@ def ishappy(n):
             return True
     return False
         
-n=2
+n=19
 print(ishappy(n))
