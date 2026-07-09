@@ -84,7 +84,7 @@ class SLL:
         else:
             temp.data=0
             return 1
-n1=Node(9)
+n1=Node(10)
 sll=SLL()
 sll.head=n1
 n2=Node(8)
