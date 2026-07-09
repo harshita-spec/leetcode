@@ -80,7 +80,7 @@ n4 = Node(25)
 n3.next = n4
 n5 = Node(30)
 n4.next = n5
-n6 = Node(40)
+n6 = Node(45)
 n5.next = n6
 sll.traversal()
 sll.deletemidnode()
