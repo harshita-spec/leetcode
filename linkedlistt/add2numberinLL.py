@@ -67,13 +67,17 @@ class SLL:
 a1 = Node(1)
 a2 = Node(2)
 a3 = Node(3)
+a4 = Node(4)
 a1.next = a2
-a2.next = a3  
+a2.next = a3
+a3.next = a4
 listA = SLL()
 listA.head = a1
 b1 = Node(7)
 b2 = Node(8)
-b1.next = b2 
+b3 = Node(9)
+b1.next = b2
+b2.next = b3
 listB = SLL()
 listB.head = b1
 listA.traversal()
