@@ -27,4 +27,6 @@ n2=Node(10)
 n1.next=n2
 n3=Node(14)
 n2.next=n3
+n4=Node(20) 
+n3.next=n4
 sll.traversal()
