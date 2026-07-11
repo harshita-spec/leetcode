@@ -43,7 +43,7 @@ def pascalTriangle(n):
             tempLst.append(nCr(row - 1, col - 1))
         ans.append(tempLst)
     return ans
-n = 6
+n = 7
 ans = pascalTriangle(n)
 for it in ans:
     for ele in it:
