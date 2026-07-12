@@ -6,4 +6,4 @@ for i in range(len(arr)):
             temp=arr[i]
             arr[i]=arr[j]
             arr[j]=temp
-print("Sorted array is:", arr)
+print( arr)
