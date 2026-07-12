@@ -14,7 +14,7 @@ class queues:
             self.front=0
             self.end=0
         else:
-            self.end=(self.end+1)%self.size
+            self.end=(self.end+1) % self.size
         self.q[self.end]=data
         self.cursize+=1
     
@@ -22,11 +22,12 @@ class queues:
     def pop(self):
         if self.cursize==0:
             print("queue underflow")
-        elif self.cursize==1:
+        el=self.q[self.front]
+        if self.cursize==1:
             self.front=self.end=-1
         else:
             self.front=(self.front+1)%self.size
-        el=self.q[self.front]
+        # el=self.q[self.front]
         self.cursize-=1
         return el
         
