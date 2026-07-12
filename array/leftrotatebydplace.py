@@ -41,6 +41,22 @@
 
 # rotate 8 steps to the left: [1, 5, 3, -5, 3, 4]
 
+# brute force
+def rotate(arr,d):
+    temp=[]
+    for i in range(d):
+        temp.append(arr[i])
+    for i in range(d,len(arr)):
+        arr[i-d]=arr[i]
+    for i in range(len(temp)):
+        arr[len(arr)-d+i]=temp[i]
+    return arr
+arr=[1,2,3,4,5,6]
+d=2
+r=rotate(arr,d)
+print(r)
+
+# optimal
 def reverse(arr,start,end):
     while start<=end:
         temp=arr[start]
