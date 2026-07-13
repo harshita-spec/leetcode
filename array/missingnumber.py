@@ -13,15 +13,17 @@
 
 def miss(arr,n):
     sum=(n*(n+1))/2
-    s2=0
+    s=0
     for i in range(n):
-        s2+=arr[i]
-    return int(sum-s2)
+        s+=arr[i]
+    return int(sum-s)
+
 def misss(arr,n):
     for i in range(n):
         if i not in arr:
             return i
     return n  
+
 arr=[0, 1, 2, 4, 5, 6]
 n=len(arr)
 print(miss(arr,n))
