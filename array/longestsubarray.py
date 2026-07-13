@@ -38,7 +38,7 @@ def getLongestSubarray(a, k):
         if right < len(a) : 
             Sum += a[right]
     return maxLen
-arr = [-3, 2, 1]
-k = 3
+arr = [10, 5, 2, 7, 1, 9]
+k = 10
 print(getLongestSubarray(arr, k))
 print(findsubarray(arr,k))
