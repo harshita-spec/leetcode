@@ -22,9 +22,13 @@ def consecutive(arr,n):
         else:
             count=0
     return maxi
+
 def maximum(a,b):
-    if a>b:return a
-    else:return b
+    if a>b:
+        return a
+    else:
+        return b
+    
 arr=[1, 1, 0, 0, 1, 1, 1,1,1,0,1, 0]
 n=len(arr)
 result=consecutive(arr,n)
