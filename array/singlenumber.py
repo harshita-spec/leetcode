@@ -39,5 +39,5 @@ def single(arr):
         res=res^arr[i]
     return res
 
-arr=[1,2,2,4,3,3,5,1,5,6,4]
+arr=[1,2,2,4,3,3,5,1,5,6,4,7,7]
 print(single(arr))
