@@ -19,12 +19,12 @@ class LinkedListQueue:
 
     # Method to push an element in the queue
     def push(self, x):
-        element = Node(x)
+        ele = Node(x)
         if self.start is None:
-            self.start = self.end = element
+            self.start = self.end = ele
         else:
-            self.end.next = element  
-            self.end = element 
+            self.end.next = ele 
+            self.end = ele 
         self.size += 1
 
     # Method to pop an element from the queue
