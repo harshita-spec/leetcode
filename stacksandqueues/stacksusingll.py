@@ -12,15 +12,15 @@ class LinkedListStack:
     def traversal(self):
         temp=self.head
         while temp:
-            print(temp.val,end="->")
+            print(temp.val,end=" ")
             temp=temp.next
         print("None")
 
     # Method to push an element onto the stack
     def push(self, x):
-        element = Node(x)
-        element.next = self.head 
-        self.head = element
+        ele = Node(x)
+        ele.next = self.head 
+        self.head = ele
         self.size += 1
 
     # Method to pop an element from the stack
