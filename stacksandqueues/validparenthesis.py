@@ -38,5 +38,5 @@ def isValid(s):
             else:
                 return False
     return not stack 
-s="()[]{}"
+s="[()[]{}]"
 print(isValid(s))
