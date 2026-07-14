@@ -30,7 +30,7 @@ class LinkedListQueue:
     # Method to pop an element from the queue
     def pop(self):
         if self.start is None:
-            return -1  
+            return "Queue is empty"
         value = self.start.val 
         temp = self.start  
         self.start = self.start.next  
@@ -40,7 +40,7 @@ class LinkedListQueue:
     
     def peek(self):
         if self.start is None:
-            return -1 
+            return "Queue is empty"
         return self.start.val 
 
     def isEmpty(self):
