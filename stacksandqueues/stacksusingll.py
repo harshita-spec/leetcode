@@ -12,7 +12,7 @@ class LinkedListStack:
     def traversal(self):
         temp=self.head
         while temp:
-            print(temp.val,end=" ")
+            print(temp.val,end="->")
             temp=temp.next
         print("None")
 
@@ -26,7 +26,7 @@ class LinkedListStack:
     # Method to pop an element from the stack
     def pop(self):
         if self.head is None:
-            return -1 
+            return "Stack is empty" 
         value = self.head.val 
         temp = self.head 
         self.head = self.head.next 
@@ -37,7 +37,7 @@ class LinkedListStack:
     # Method to get the top element of the stack
     def top(self):
         if self.head is None:
-            return -1  
+            return "Stack is empty"  
         return self.head.val  
 
     # Method to check if the stack is empty
