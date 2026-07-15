@@ -30,3 +30,19 @@ def countofnextgreaternumber(arr, indices):
 arr = [3, 4, 2, 7, 5, 8, 10, 6]
 indices = [0, 5]
 print(countofnextgreaternumber(arr, indices))
+
+# Optimal approach
+def countofnextgreaternumber(arr, indices):
+    n=len(arr)
+    nge=[0]*n
+    st=[]
+    for i in range(n-1,-1,-1):
+        while st and st[-1]<=arr[i]:
+            st.pop()
+        nge[i]=len(st)
+        st.append(arr[i])
+    result=[nge[i] for i in indices]
+    return result
+arr = [1, 2, 3, 4, 1]
+indices = [0, 3]
+print(countofnextgreaternumber(arr, indices))
