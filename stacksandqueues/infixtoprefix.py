@@ -45,5 +45,5 @@ def infixToPrefix(s):
 
     return reversed(res)
 
-s = "(a+b)*(c-d)+e"
+s = "(a+b)*(c-d)^e"
 print(infixToPrefix(s))
