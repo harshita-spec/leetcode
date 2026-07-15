@@ -16,7 +16,7 @@ def infixToPostfix(s):
         if c.isalnum():
             res += c
         elif c == '(':
-            st.append('(')
+            st.append(c)
         elif c == ')':
             while st and st[-1] != '(':
                 res += st.pop()
