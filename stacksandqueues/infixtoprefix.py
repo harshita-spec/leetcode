@@ -9,7 +9,7 @@ def prec(c):
     else:
         return -1
     
-def reverse(s):
+def reversed(s):
     s = list(s)
     s.reverse() 
     for i in range(len(s)):
@@ -20,7 +20,7 @@ def reverse(s):
     return ''.join(s)
 
 def infixToPrefix(s):
-    s = reverse(s)
+    s = reversed(s)
     
     st = []
     res = ""
@@ -43,7 +43,7 @@ def infixToPrefix(s):
     while st:
         res += st.pop()
 
-    return reverse(res)
+    return reversed(res)
 
 s = "(a+b)*(c-d)+e"
 print(infixToPrefix(s))
