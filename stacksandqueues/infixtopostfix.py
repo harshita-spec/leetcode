@@ -1,3 +1,4 @@
+# infix to postfix conversion using stack
 def prec(c):
     if c == '^':  
         return 3
@@ -10,7 +11,7 @@ def prec(c):
 
 def infixToPostfix(s):
     st = []  
-    res = ""  
+    res = " "  
     for c in s:
         if c.isalnum():
             res += c
