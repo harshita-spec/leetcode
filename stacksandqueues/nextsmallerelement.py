@@ -34,3 +34,20 @@ def nextsmallerelement(arr):
     return nse
 arr = [4, 8, 5, 2, 25]
 print(nextsmallerelement(arr))
+
+#optimal approach
+def nextsmallerele(arr):
+    n=len(arr)
+    nse=[0]*n
+    st=[]
+    for i in range(n-1,-1,-1):
+        while st and st[-1]>=arr[i]:
+            st.pop()
+        if st:
+            nse[i]=st[-1]
+        else:
+            nse[i]=-1
+        st.append(arr[i])
+    return nse
+arr = [10, 9, 8, 7]
+print(nextsmallerele(arr))
