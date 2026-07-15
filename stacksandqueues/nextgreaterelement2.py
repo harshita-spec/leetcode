@@ -30,3 +30,21 @@ def nextgreaterelement(arr):
     return nge
 arr = [5, 7, 1, 7, 6, 0]
 print(nextgreaterelement(arr))
+
+# optimal approach
+def nextgreaterele(arr):
+    n=len(arr)
+    nge=[0]*n
+    st=[]
+    for i in range(2*n-1,-1,-1):
+        while st and st[-1]<=arr[i%n]:
+            st.pop()
+        if i<n:
+            if st:
+                nge[i]=st[-1]
+            else:
+                nge[i]=-1
+        st.append(arr[i%n])
+    return nge
+arr = [3, 10, 4, 2, 1, 2, 6, 1, 7, 2, 9]
+print(nextgreaterele(arr))
