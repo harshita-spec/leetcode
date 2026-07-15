@@ -1,6 +1,5 @@
 # postfix to infix conversion using stack
 def postfixToInfix(s):
-    i=0
     st=[]
     for c in s:
         if c.isalnum():
