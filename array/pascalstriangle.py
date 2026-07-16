@@ -29,9 +29,9 @@ def pascalrow(N):
     row.append(val)
     for k in range(1, N):
         val = val * (N - k) // k
-        row.append(val)
+        row.append(val) 
     return row
-n=6
+n=3
 print(pascalrow(n))
 print()
 
