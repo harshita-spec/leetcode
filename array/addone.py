@@ -25,11 +25,13 @@
 
 def addone(digits):
     for i in range(len(digits)-1,-1,-1):
+        carry=0
         if digits[i] < 9:
-            digits[i]+=1
+            digits[i]=digits[i]+carry+1
             return digits
         else:
             digits[i]=0
-        return [1] + digits
-digits = [9]
+            carry=1
+    return [1] + digits
+digits = [8,0]
 print(addone(digits))
