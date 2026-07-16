@@ -41,3 +41,4 @@ def sumofsubarrayrange(nums):
     return total
 nums=[1, 2, 3]
 print(sumofsubarrayrange(nums))
+
