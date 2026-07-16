@@ -33,5 +33,5 @@ def addone(digits):
             digits[i]=0
             carry=1
     return [1] + digits
-digits = [8,0]
+digits = [1,2,9]
 print(addone(digits))
