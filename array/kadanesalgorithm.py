@@ -69,6 +69,6 @@ def kadanes(arr):
         if sum<0:
             sum=0
     return ansstart,ansend
-arr=[2, 3, 5, -2, 7, -4]
+arr=[2, 3, 5, -2, 7, -4,-1]
 result=kadanes(arr)
 print(result)
