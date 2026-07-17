@@ -34,7 +34,17 @@ def leader(arr):
         if arr[i]>maxi:
             ans.append(arr[i])
         maxi=max(maxi,arr[i])
-    return sorted(ans)
+    return sorts(ans)
+
+def sorts(ans):
+    low=0
+    high=len(ans)-1
+    while low<=high:
+        ans[low],ans[high]=ans[high],ans[low]
+        low+=1
+        high-=1
+    return ans
+
 arr=[10,22,12,3,0,6]
 result=leader(arr)
 print(result)
