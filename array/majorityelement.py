@@ -20,19 +20,19 @@ def majority(arr):
         if count>len(arr)/2:
             return arr[i]
     return -1
-arr=[7, 0, 0, 1, 7, 2, 7, 7,7 ,7,7,7]
+arr=[7, 0, 0, 1, 7, 2, 7, 7,7,7,7]
 result=majority(arr)
 print(result) 
 
 def Majority(arr):
-    hash_map={}
+    mpp={}
     for i in range(len(arr)):
-        if arr[i] in hash_map:
-            hash_map[arr[i]]+=1
+        if arr[i] in mpp:
+            mpp[arr[i]]+=1
         else:
-            hash_map[arr[i]]=1
-    for key in hash_map:
-        if hash_map[key]>len(arr)/2:
+            mpp[arr[i]]=1
+    for key in mpp:
+        if mpp[key]>len(arr)/2:
             return key
     return -1
 arr=[7, 0, 0, 1, 7, 7, 2, 7, 7]
@@ -56,7 +56,7 @@ def major(arr):
     if count1>(len(arr)/2):
         return ele
     return -1
-arr=[7, 0, 0, 1, 6, 2, 7, 7 ,7]
+arr=[7, 0, 0, 1, 6, 2, 7 ,7,6,6,6,6,6,6,6]
 result=major(arr)
 print(result)
 
