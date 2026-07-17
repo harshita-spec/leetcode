@@ -32,6 +32,22 @@ def ls(a,x):
 a=[0,3,7,2,5,8,4,6,0,1]
 print(elements(a))
 
+def longestseq(a):
+    a=sorted(a)
+    n=len(a)
+    longest=1
+    cnt=0
+    lsmaller=float('inf')
+    for i in range(n):
+        if a[i]-1==lsmaller:
+            cnt+=1
+        elif a[i]!=lsmaller:
+            cnt=1
+        lsmaller=a[i]
+        longest=max(longest,cnt)
+    return longest
+a=[0,3,7,2,5,8,4,6,0,1]
+print(longestseq(a))
 
 def longestSuccessiveElements(a):
     n = len(a)
