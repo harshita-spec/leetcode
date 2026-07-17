@@ -47,6 +47,6 @@ def sortt(arr):
             high-=1
     return arr
 
-arr=[0,1,1,0,1,2,1,2,0,0,0]
+arr=[0,1,1,0,1,2,1,2,0,0,0,0,2,1,2,2]
 result=sortt(arr)
 print(result)
