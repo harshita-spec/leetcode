@@ -25,6 +25,6 @@ def stock(arr):
         profit=max(profit,cost)
         mini=min(mini,arr[i])
     return profit
-arr=[7,1,5,6,4]
+arr=[7,1,5,6,5,4]
 result=stock(arr)
 print(result)
