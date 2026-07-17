@@ -32,12 +32,12 @@ target=6
 print(Twosum(nums,target))
   
 def twoSum(nums, target):
-        hash_map = {}
+        mpp = {}
         for index, num in enumerate(nums):
-            com = target - num
-            if com in hash_map:
-                return [hash_map[com], index]
-            hash_map[num] = index
+            comp = target - num
+            if comp in mpp:
+                return [mpp[comp], index]
+            mpp[num] = index
         return []
 
 def twosum(arr,target):
