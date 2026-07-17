@@ -78,7 +78,7 @@ def zeroMatrix(matrix, n, m):
         for i in range(n):
             matrix[i][0] = 0
     return matrix
-matrix = [[1, 1, 1], [1, 0, 1], [1, 1, 1]]
+matrix = [[1, 1, 1], [1, 0, 1], [1, 0, 1]]
 n = len(matrix)
 m = len(matrix[0])
 ans = zeroMatrix(matrix, n, m)
