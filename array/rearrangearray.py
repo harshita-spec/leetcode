@@ -13,6 +13,7 @@
 # Output : [1, -1, 2, -3, 3, -4]
 # Explanation: The positive number 1, 2, 3 maintain their relative positions and -1, -3, -4 maintain their relative positions
 
+# brute force approach
 def rearrangearray(arr):
     n=len(arr)
     neg=[]
@@ -27,9 +28,9 @@ def rearrangearray(arr):
         arr[2*i+1]=neg[i]
     return arr
 arr=[3,-2,4,5,9,-4,-1,-8]
-result=rearrangearray(arr)
-print(result)
+print(rearrangearray(arr))
 
+# optimal approach when neg and pos elements are equal
 def rearrange(arr):
     n=len(arr)
     ans=[0]*n
@@ -44,6 +45,36 @@ def rearrange(arr):
             posind+=2
     return ans
 
-arr=[3,-2,4,5,9,-4,-1]
+arr=[3,-2,4,5,9,-4,-1,-8]
 result=rearrange(arr)
 print(result)
+
+# optimal approach when neg and pos elements are not equal
+def rearrange1(arr):
+    n=len(arr)
+    pos=[]
+    neg=[]
+    for i in range(n):
+        if arr[i]<0:
+            neg.append(arr[i])
+        else:
+            pos.append(arr[i])
+    if len(pos)>len(neg):
+        for i in range(len(neg)):
+            arr[2*i]=pos[i]
+            arr[2*i+1]=neg[i]
+        ind=len(neg)*2
+        for i in range(len(neg),len(pos)):
+            arr[ind]=pos[i]
+            ind+=1
+    else:
+        for i in range(len(pos)):
+            arr[2*i]=pos[i]
+            arr[2*i+1]=neg[i]
+        ind=len(pos)*2
+        for i in range(len(pos),len(neg)):
+            arr[ind]=neg[i]
+            ind+=1
+    return arr
+arr=[3,-2,4,5,9,-4,-1,-3,-5,4,-6,-10,-3]
+print(rearrange1(arr))
