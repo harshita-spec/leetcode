@@ -25,14 +25,21 @@ def Permutation(A):
             ind = i
             break
     if ind == -1:
-        A.reverse()
+        reverse(A,0,n-1)
         return A
     for i in range(n - 1, ind, -1):
         if A[i] > A[ind]:
             A[i], A[ind] = A[ind], A[i]
             break
-    A[ind+1:] = reversed(A[ind+1:])
+    reverse(A,ind+1,n-1)
     return A
+
+def reverse(arr,low,high):
+    while low<=high:
+        arr[low],arr[high]=arr[high],arr[low]
+        low+=1
+        high-=1
+    return arr
 
 A = [2, 1, 5, 4, 3, 0, 0]
 ans = Permutation(A)
