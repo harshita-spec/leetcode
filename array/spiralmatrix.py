@@ -19,7 +19,7 @@
 # Output: 1, 2, 3, 6, 9, 8, 7, 4, 5.
 # Explanation: The output of matrix in spiral form.
 
-def Spiral(mat):
+def spiral(mat):
     ans = []
     n = len(mat) 
     m = len(mat[0]) 
@@ -44,8 +44,8 @@ def Spiral(mat):
             left += 1
     return ans
 mat =  [ [ 1, 2, 3, 4 ],
- 		      [ 5, 6, 7, 8 ],
-		      [ 9, 10, 11, 12 ],
-              [ 13, 14, 15, 16 ] ]          
-ans = Spiral(mat)
+ 		[ 5, 6, 7, 8 ],
+		[ 9, 10, 11, 12 ],
+        [ 13, 14, 15, 16 ] ]          
+ans = spiral(mat)
 print(ans)
