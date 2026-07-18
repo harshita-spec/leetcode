@@ -57,5 +57,5 @@ def findAllSubarraysWithGivenSum(arr, k):
     return cnt
 arr = [3, 1, 2, 4,7,1,1,1,1,2,2]
 k = 6
-cnt = findAllSubarraysWithGivenSum(arr, k)
-print( cnt)
+print(findAllSubarraysWithGivenSum(arr, k))
+
