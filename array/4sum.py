@@ -63,7 +63,7 @@ def sum(arr,target):
                     l-=1
     return ans
 
-arr = [1,0,-1,0,-2,2]
-target=0
+arr = [2,2,2,2,2]
+target=8
 ans = sum(arr,target) 
 print(ans)
