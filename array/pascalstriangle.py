@@ -17,7 +17,6 @@ def nCr(n, r):
         res = res * (n - i)
         res = res // (i + 1)
     return int(res)
-
 n=5
 r=3
 print(nCr(n-1, r-1))
@@ -50,4 +49,23 @@ for it in ans:
         print(ele, end=" ")
     print()
 
-
+def generate(n):
+    ansl=[]
+    ans=1 
+    ansl.append(ans)
+    for i in range(n):
+        ans=ans*(n-i)
+        ans=ans//(i+1)
+        ansl.append(ans)
+    return ansl
+def pascal(n):
+    ans=[]
+    for i in range(n):
+        ans.append(generate(i+1))
+    return ans
+n=5
+ans = pascal(n)
+for it in ans:
+    for ele in it:
+        print(ele, end=" ")
+    print()
