@@ -31,6 +31,6 @@ def threeSumClosest(nums, target):
                 else:
                     j+=1
         return closesum
-nums=[-1,2,1,-4]
+nums=[0,0,0]
 target=1
 print(threeSumClosest(nums, target))
