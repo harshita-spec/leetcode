@@ -35,14 +35,3 @@ def containdup(arr):
 arr=[1,3,5,6,2,6,7]
 print(containdup(arr))
 
-def duplicate(arr):
-        w = set()
-        for i in range(len(nums)):
-            if nums[i] in w:
-                return True
-            w.add(nums[i])
-            if len(w) > k:
-                w.remove(nums[i - k])
-        return False  
-arr=[1,1,1,3,3,4,3,2,4,2]
-print(duplicate(arr))
