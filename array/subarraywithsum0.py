@@ -26,7 +26,7 @@ def maxLen(A,n):
             else:
                 mpp[sum] = i
     return maxi
-a= [2, 10, 4]
+a= [15, -2, 2, -8, 1, 7, 10, 23]
 n=len(a)
 result=maxLen(a,n)
 print(result)
