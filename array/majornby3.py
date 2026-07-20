@@ -11,6 +11,20 @@
 # Explanation: Here, n / 3 = 7 / 3 = 2.
 # Therefore the elements appearing 3 or more times is : [1, 2]
 
+def majorityelement(v):
+    ans=[]
+    n=len(v)
+    for i in range(n):
+        count=0
+        for j in range(n):
+            if v[i]==v[j]:
+                count+=1
+        if count>n//3 and v[i] not in ans:
+            ans.append(v[i])
+    return ans
+arr=[1, 2, 1, 1, 3, 2, 2]
+print(majorityelement(arr))
+
 def majorityElement(v):
     n = len(v)
     cnt1, cnt2 = 0, 0 
