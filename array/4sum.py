@@ -33,7 +33,7 @@ ans = sum4(arr,n)
 print(ans)
 
 #optimal 
-def sum(arr,target):
+def sumfor(arr,target):
     ans=[]
     arr=sorted(arr)
     for i in range(len(arr)):
@@ -63,7 +63,7 @@ def sum(arr,target):
                     l-=1
     return ans
 
-arr = [2,2,2,2,2]
-target=8
-ans = sum(arr,target) 
+arr = [1,0,-1,0,-2,2]
+target=0
+ans = sumfor(arr,target) 
 print(ans)
