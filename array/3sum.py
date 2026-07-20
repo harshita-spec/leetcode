@@ -17,6 +17,7 @@
 # Note that we have used two -1s as they are separate elements with different indexes
 # But we have not used the -1 at index 4 as that would create a duplicate triplet
 
+# better approach
 def triplet(n, arr):
     st = set()
     for i in range(n):
@@ -30,7 +31,7 @@ def triplet(n, arr):
             hashset.add(arr[j])
     ans = list(st)
     return ans
-arr=[2, -1, -1, 3, -1]
+arr=[2, -2, 0, 3, -3, 5]
 n=len(arr)
 ans = triplet(n, arr)
 print(ans)
