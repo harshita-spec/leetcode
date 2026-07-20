@@ -11,6 +11,7 @@
 # Explanation: Here, n / 3 = 7 / 3 = 2.
 # Therefore the elements appearing 3 or more times is : [1, 2]
 
+# brute force approach
 def majorityelement(v):
     ans=[]
     n=len(v)
@@ -25,6 +26,23 @@ def majorityelement(v):
 arr=[1, 2, 1, 1, 3, 2, 2]
 print(majorityelement(arr))
 
+# better approach
+def majorityEle(nums):
+        ls=[]
+        mpp={}
+        mini=(len(nums)//3)+1
+        for i in range(len(nums)):
+            mpp[nums[i]] = mpp.get(nums[i], 0) + 1
+            if mpp[nums[i]]==mini:
+                ls.append(nums[i])
+        return ls
+nums=[1, 2, 1, 1, 3, 2, 2]
+ans=majorityEle(nums)
+for it in ans:
+    print(it, end=" ")
+print()
+
+# optimal aproach
 def majorityElement(v):
     n = len(v)
     cnt1, cnt2 = 0, 0 
