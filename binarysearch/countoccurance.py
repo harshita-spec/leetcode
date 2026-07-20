@@ -53,3 +53,41 @@ n=len(arr)
 k=8
 result=count(arr,n,k)
 print(result)
+
+# by using lower and upper bound
+def occurance(arr,n,k):
+    lb=lowerbound(arr,n,k)
+    if lb==n or arr[lb]!=k:
+        return 0
+    return upperbound(arr,n,k)-lb 
+
+def lowerbound(arr,n,k):
+    low=0
+    high=n-1
+    ans=n
+    while low<=high:
+        mid=(low+high)//2
+        if arr[mid]>=k:
+            ans=mid
+            high=mid-1
+        else:
+            low=mid+1
+    return ans
+
+def upperbound(arr,n,k):
+    low=0
+    high=n-1
+    ans=n
+    while low<=high:
+        mid=(low+high)//2
+        if arr[mid]>k:
+            ans=mid
+            high=mid-1
+        else:
+            low=mid+1
+    return ans
+
+arr=[2,8,8,8,8,8,8,8,10,11]
+n=len(arr)
+k=10
+print(occurance(arr,n,k))
