@@ -21,6 +21,23 @@ def intersection(nums1, nums2):
 nums1 = [1,2,2,1]
 nums2 = [2,2]
 print(intersection(nums1,nums2))
+
+def intersections(nums1,nums2):
+        n1=sorted(nums1)
+        n2=sorted(nums2)
+        i=0
+        j=0
+        ans=[]
+        while i<len(n1) and j<len(n2):
+            if n1[i]==n2[j]:
+                ans.append(n1[i])
+                i+=1
+                j+=1
+            elif n1[i]< n2[j]:
+                i+=1
+            else:
+                j+=1
+        return ans
 nums3 = [4,9,5]
 nums4 = [9,4,9,8,4]
-print(intersection(nums3,nums4))
+print(intersections(nums3,nums4))
