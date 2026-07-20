@@ -48,3 +48,41 @@ arr=[2,8,8,8,8,8,8,8,10,11]
 n=len(arr)
 k=8
 print(firstnlast(arr,n,k))
+
+# by using upper and lower bound
+def firstlast(arr,n,k):
+    lb=lowerbound(arr,n,k)
+    if lb==n or arr[lb]!=k:
+        return {-1,-1}
+    return {lb,upperbound(arr,n,k)-1}
+
+def lowerbound(arr,n,k):
+    low=0
+    high=n-1
+    ans=n
+    while low<=high:
+        mid=(low+high)//2
+        if arr[mid]>=k:
+            ans=mid
+            high=mid-1
+        else:
+            low=mid+1
+    return ans
+
+def upperbound(arr,n,k):
+    low=0
+    high=n-1
+    ans=n
+    while low<=high:
+        mid=(low+high)//2
+        if arr[mid]>k:
+            ans=mid
+            high=mid-1
+        else:
+            low=mid+1
+    return ans
+
+arr=[2,8,8,8,8,8,8,8,10,11]
+n=len(arr)
+k=8
+print(firstlast(arr,n,k))
