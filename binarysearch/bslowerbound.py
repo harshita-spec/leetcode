@@ -29,3 +29,18 @@ arr=[3,5,6,8,15,19]
 target=15
 result=lb(arr,target)
 print(result)
+
+def lb(arr,target):
+    low=0
+    high=len(arr)-1
+    while low<=high:
+        mid=(low+high)//2
+        if arr[mid]>=target:
+            ans=mid
+            high=mid-1
+        else:
+            low=mid+1
+    return low
+arr=[3,5,6,8,15,19]
+target=15
+print(lb(arr,target))
