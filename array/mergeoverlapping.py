@@ -29,6 +29,23 @@ def mergeinterval(arr):
 arr=[[5,7],[1,3],[4,6],[8,10]]
 print(mergeinterval(arr))
 
+def merge(arr):
+        arr.sort()
+        ans = []
+        n = len(arr)
+        i = 0
+        while i < n:
+            start = arr[i][0]
+            end = arr[i][1]
+            j = i + 1
+            while j < n and arr[j][0] <= end:
+                end = max(end, arr[j][1])
+                j += 1
+            ans.append([start, end])
+            i = j
+        return ans
+arr=[[5,7],[1,3],[4,6],[8,10]]
+print(merge(arr))
 
 def merged(arr):
     n=len(arr)
