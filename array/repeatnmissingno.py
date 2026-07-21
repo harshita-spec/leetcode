@@ -27,6 +27,6 @@ def number(arr):
     x=(val1+val2)/2
     y=(x-val1)
     return {int(x),int(y)}
-arr=[4,3,6,2,1,1,5,8]
+arr=[4,3,6,2,1,1,5,8,9]
 result=number(arr)
 print(result)
