@@ -26,7 +26,7 @@ def mergeinterval(arr):
                 break
         ans.append([start,end])
     return ans
-arr=[[5,7],[1,3],[4,6],[8,10]]
+arr=[[1,3],[2,6],[8,10],[15,18]]
 print(mergeinterval(arr))
 
 def merge(arr):
