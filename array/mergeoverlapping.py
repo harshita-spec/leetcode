@@ -11,6 +11,25 @@
 # Output: [[1,3],[4,7],[8,10]]
 # Explanation: Intervals [4,6] and [5,7] overlap and are merged into [4,7].
 
+def mergeinterval(arr):
+    arr=sorted(arr)
+    ans=[]
+    for i in range(len(arr)):
+        start=arr[i][0]
+        end=arr[i][1]
+        if ans and end <= ans[-1][1]:
+            continue
+        for j in range(i+1,len(arr)):
+            if arr[j][0]<=end:
+                end=max(end,arr[j][1])
+            else:
+                break
+        ans.append([start,end])
+    return ans
+arr=[[5,7],[1,3],[4,6],[8,10]]
+print(mergeinterval(arr))
+
+
 def merged(arr):
     n=len(arr)
     arr=sorted(arr)
