@@ -22,6 +22,6 @@ def largestodd(s):
             return s[:i+1]
     return '" "'
     
-s = "0246589"
-result = largestodd(s)
-print(result)
+s = "02465892"
+print(largestodd(s))
+
