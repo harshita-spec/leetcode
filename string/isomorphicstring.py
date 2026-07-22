@@ -34,7 +34,7 @@ def isomorphic(s,t):
             if s[i]!=s[j] and t[i]==t[j]:
                 return False
     return True
-s = "foo"
+s = "goo"
 t = "baa"
 print(isomorphic(s,t))
 
