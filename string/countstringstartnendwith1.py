@@ -20,6 +20,5 @@ def countsubstrings(s):
                 if s[j]=='1':
                     count+=1
     return count
-s="00100101"
+s="0010010101"
 print(countsubstrings(s))
-
