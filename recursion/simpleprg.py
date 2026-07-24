@@ -31,3 +31,20 @@ n=5
 fu(1,n)
 print()
 
+# sum of first n numbers
+def sumofN(n,s):
+    if n<1:
+        print(s)
+        return 
+    s+=n
+    sumofN(n-1,s)
+n=5
+sumofN(5,0)
+print()
+
+def sum(n):
+    if n==1:
+        return 1
+    return n+sum(n-1)
+n=5
+print(sum(n))
