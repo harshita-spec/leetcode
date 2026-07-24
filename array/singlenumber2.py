@@ -21,3 +21,13 @@ def singlenumber(nums):
                 return nums[i] 
 nums = [2,2,3,2]
 print(singlenumber(nums))   
+
+def singlenum2(nums):
+        freq={}
+        for s in nums:
+            freq[s]=freq.get(s,0)+1
+        for i,l in freq.items():
+            if l==1:
+                 return i
+nums=[4,5,4,5,6,7,6]
+print(singlenum2(nums))
