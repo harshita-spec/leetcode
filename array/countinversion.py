@@ -19,7 +19,18 @@
 # Output: 0
 # Explanation: nums is sorted, hence no inversions present.
 
+# brute force
+def countinversion(arr):
+    count=0
+    for i in range(len(arr)):
+        for j in range(i+1,len(arr)):
+            if arr[i]>arr[j]:
+                count+=1
+    return count
+arr=[2, 3, 7, 1, 3, 5]
+print(countinversion(arr))
 
+# optimal by using merge sort
 def merge(arr,low,mid,high):
     temp=[]
     left=low
