@@ -36,6 +36,6 @@ def rotate(nums,target):
             else:
                 high=mid-1
     return False 
-nums=[5,1,2,3,4,5,5,5,5,5,5]
-target=5
+nums=[5,6,7,1,2,3,4,5,5,5,5,5,5,5]
+target=2
 print(rotate(nums,target))
