@@ -18,7 +18,8 @@
 # Input: nums = [-10, -5, 6, 11, 15, 17]
 # Output: 0
 # Explanation: nums is sorted, hence no inversions present.
-import math
+
+
 def merge(arr,low,mid,high):
     temp=[]
     left=low
@@ -45,7 +46,7 @@ def mergesort(arr,low,high):
     count=0
     if low>=high:
         return count
-    mid=math.floor((low+high)/2)
+    mid=(low+high)//2
     count+=mergesort(arr,low,mid)
     count+=mergesort(arr,mid+1,high)
     count+=merge(arr,low,mid,high)
