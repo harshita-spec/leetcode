@@ -15,6 +15,19 @@
 # Output: 0
 # Explanation: No pairs satisfy both the conditons.
 
+# brute force
+def reversepair(arr):
+    count=0
+    for i in range(len(arr)):
+        for j in range(i+1,len(arr)):
+            if arr[i]>(2*arr[j]):
+                count+=1
+    return count
+nums = [6, 4, 1, 2, 7]
+print(reversepair(nums))
+
+
+# optimal
 def merge(arr,low,mid,high):
     temp=[]
     left=low
@@ -34,6 +47,7 @@ def merge(arr,low,mid,high):
         right+=1
     for i in range(low,high+1):
         arr[i]=temp[i-low]
+        
 def mergesort(arr,low,high):
     count=0
     if low>=high:
@@ -44,6 +58,7 @@ def mergesort(arr,low,high):
     count+=countpair(arr,low,mid,high)
     merge(arr,low,mid,high)
     return count
+
 def countpair(arr,low,mid,high):
     count=0
     right=mid+1
@@ -52,8 +67,10 @@ def countpair(arr,low,mid,high):
             right+=1
         count+=(right-(mid+1))
     return count
+
 def reversepair(arr,n):
     return mergesort(arr,0,n-1)
+
 arr=[5, 4, 4, 3, 3]
 n=len(arr)
 result=reversepair(arr,n)
