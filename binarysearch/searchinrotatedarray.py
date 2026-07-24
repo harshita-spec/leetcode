@@ -37,7 +37,7 @@ def rotate(arr,target):
             else:
                 high=mid-1
     return -1
-arr=[7,8,9,1,2,3,4,5,6]
+arr=[8,9,1,2,3,4,5,6,7]
 target=8
 result=rotate(arr,target)
 print(result)
