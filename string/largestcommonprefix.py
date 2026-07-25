@@ -25,5 +25,5 @@ def largecommon(s):
             return ''.join(ans)
         ans.append(f[i])
     return ''.join(ans)
-s=["flowers" , "flow" , "floy", "floght" ]
+s=["flowers" , "flow" , "floy", "flight" ]
 print(largecommon(s))
