@@ -65,6 +65,7 @@ class DLL:
         self.head=a.next
         a.next.prev=None
         a.next=None
+
 #deletion at end
     def deletion_at_end(self):
         prev=self.head
@@ -74,6 +75,7 @@ class DLL:
             prev=prev.next
         a.prev=None
         prev.next=None
+
 #deletion at specific position
     def deletion_at_position(self,position):
         prev=self.head
@@ -89,7 +91,7 @@ class DLL:
 n1=Node(10)
 dll=DLL()
 dll.head=n1
-n2=Node(15)
+n2=Node(30)
 n1.next=n2
 n2.prev=n1
 n3=Node(20)
