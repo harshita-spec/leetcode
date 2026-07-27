@@ -57,7 +57,47 @@ class SLL:
             left=left.next
             right=right.next
         return True
-    
+
+    def palindromee(self):
+        if self.head is None or self.head.next is None:
+            return True
+
+        slow = self.head
+        fast = self.head
+
+        while fast.next is not None and fast.next.next is not None:
+            slow = slow.next
+            fast = fast.next.next
+
+        newhead = self.reverse(slow.next)
+
+        first = self.head
+        second = newhead
+
+        while second is not None:
+            if first.data != second.data:
+                slow.next = self.reverse(newhead)
+                return False
+            first = first.next
+            second = second.next
+
+        slow.next = self.reverse(newhead)
+        return True
+
+
+    def reverse(self, head):
+        if head is None or head.next is None:
+            return head
+
+        newhead = self.reverse(head.next)
+
+        front = head.next
+        front.next = head
+        head.next = None
+
+        return newhead
+        
+
 n1=Node(5)
 sll=SLL()
 sll.head=n1
@@ -70,6 +110,10 @@ n3.next=n4
 n5=Node(5)
 n4.next=n5
 if sll.palindrome():
+    print("Palindrome")
+else:
+    print("Not a Palindrome")
+if sll.palindromee():
     print("Palindrome")
 else:
     print("Not a Palindrome")
