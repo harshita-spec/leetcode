@@ -26,14 +26,16 @@ class SLL:
     def length(self):
         mpp={}
         temp=self.head
-        timer=0
+        t=0
         while temp is not None:
             if temp in mpp:
-                return timer-mpp[temp]
-            mpp[temp]=timer
-            timer+=1
+                return t-mpp[temp]
+            mpp[temp]=t
+            t+=1
             temp=temp.next
         return 0
+
+    
     #optimal
     def length_optimal(self):
         slow=self.head
