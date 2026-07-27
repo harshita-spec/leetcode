@@ -26,12 +26,12 @@ class SLL:
     #brute
     def detectloop(self):
         mpp={}
-        temp=self.head
-        while temp is not None:
-            if temp in mpp:
+        tem=self.head
+        while tem is not None:
+            if tem in mpp:
                 return True
-            mpp[temp]=1
-            temp=temp.next
+            mpp[tem]=1
+            tem=tem.next
         return False
     
     #optimal 
