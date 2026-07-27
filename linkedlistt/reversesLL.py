@@ -32,6 +32,17 @@ class SLL:
                 temp=temp.next
             print("None")
 
+    def reversee(self):
+        st=[]
+        a=self.head
+        while a is not None:
+            st.append(a.data)
+            a=a.next
+        a=self.head
+        while a is not None:
+            a.data=st.pop()
+            a=a.next
+
     def reverse(self):
         prev=None
         temp=self.head
@@ -54,4 +65,6 @@ n4=Node(25)
 n3.next=n4
 sll.traversal()
 sll.reverse()
+sll.traversal()
+sll.reversee()
 sll.traversal()
