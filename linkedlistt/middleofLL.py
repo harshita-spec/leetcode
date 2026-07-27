@@ -30,7 +30,22 @@ class SLL:
                 print(temp.data,end=" -> ")
                 temp=temp.next
             print("None")
- 
+
+    def mid(self):
+        count=0
+        a=self.head
+        while a is not None:
+            count+=1
+            a=a.next
+        midnode=(count//2)+1
+        a=self.head
+        while a is not None:
+            midnode-=1
+            if midnode==0:
+                break
+            a=a.next
+        return a.data
+    
     def middle(self):
         slow=self.head
         fast=self.head
@@ -53,3 +68,5 @@ n4.next=n5
 sll.traversal()
 sll.middle()
 print(sll.middle().data)
+sll.mid()
+print(sll.mid())
