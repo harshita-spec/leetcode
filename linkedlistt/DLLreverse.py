@@ -17,6 +17,17 @@ class DLL:
             a=a.next
         print("none")
 
+    def reversee(self):
+        st=[]
+        a=self.head
+        while a is not None:
+            st.append(a.data)
+            a=a.next
+        a=self.head
+        while a is not None:
+            a.data=st.pop()
+            a=a.next
+
     def reverse(self):
         prev=None
         temp=self.head
@@ -43,4 +54,6 @@ n3.next=n4
 n4.prev=n3
 dll.traversal()
 dll.reverse()
+dll.traversal()
+dll.reversee()
 dll.traversal()
