@@ -33,6 +33,7 @@ class SLL:
             mpp[temp]=1
             temp=temp.next
         return None
+    
     #optimal
     def loop_starting_point_optimal(self):
         slow=self.head
@@ -46,7 +47,8 @@ class SLL:
                     slow=slow.next
                     fast=fast.next
                 return slow
-        return None
+        return -1
+    
 n1=Node(5)
 sll=SLL()
 sll.head=n1
