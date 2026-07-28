@@ -71,7 +71,7 @@ def countpair(arr,low,mid,high):
 def reversepair(arr,n):
     return mergesort(arr,0,n-1)
 
-arr=[5, 4, 4, 3, 3]
+arr=[6, 4, 1, 2, 7]
 n=len(arr)
 result=reversepair(arr,n)
 print(result)
