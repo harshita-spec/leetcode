@@ -25,6 +25,6 @@ def minmoves(nums):
             left += 1
             right -= 1
         return count
-nums = [1,10,2,9]
+nums = [1,2,3]
 print(minmoves(nums))   
         
