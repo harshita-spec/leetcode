@@ -30,7 +30,7 @@ def fun(mid,n,m):
     if ans==m:
         return 1
     return 0
-n=4
-m=69
+n=3
+m=27
 result=nthroot(n,m)
 print(result)
