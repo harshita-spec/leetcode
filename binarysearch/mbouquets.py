@@ -13,11 +13,8 @@ def bs(arr,m,k):
     n=len(arr)
     if n<(m*k):
         return -1
-    mini=float('inf')
-    maxi=float('-inf')
-    for i in range(n):
-        mini=min(mini,arr[i])
-        maxi=max(maxi,arr[i])
+    mini=min(arr)
+    maxi=max(arr)
     low=mini
     high=maxi
     while low<=high:
