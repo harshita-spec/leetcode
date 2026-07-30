@@ -34,9 +34,9 @@ def maxi(arr):
 def sumofd(arr,mid):
     sum=0
     for i in range(len(arr)):
-        sum += math.ceil(arr[i]/mid)
+        sum +=math.ceil(arr[i]/mid)
     return sum
 arr=[1, 2, 3, 4, 5]
-t=3
+t=8
 result=divisor(arr,t)
 print(result)
