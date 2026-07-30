@@ -16,7 +16,7 @@ def divisor(arr,t):
     if n > t:
         return -1
     low=1
-    high=maxi(arr)
+    high=max(arr)
     while low<=high:
         mid=(low+high)//2
         if (sumofd(arr,mid) <= t):
@@ -25,12 +25,12 @@ def divisor(arr,t):
         else:
             low=mid+1
     return ans
-def maxi(arr):
-    n=len(arr)
-    maxi=float('-inf')
-    for i in range(n):
-        maxi=max(maxi,arr[i])
-    return maxi
+# def maxi(arr):
+#     n=len(arr)
+#     maxi=float('-inf')
+#     for i in range(n):
+#         maxi=max(maxi,arr[i])
+#     return maxi
 def sumofd(arr,mid):
     sum=0
     for i in range(len(arr)):
