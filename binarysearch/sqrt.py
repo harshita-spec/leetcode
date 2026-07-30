@@ -26,7 +26,8 @@ def f(n):
     high=n
     while low<=high:
         mid=(low+high)//2
-        if mid*mid <= n:
+        sq=mid*mid
+        if sq <= n:
             ans=mid
             low=mid+1
         else:
