@@ -19,12 +19,12 @@ def bs(arr,m,k):
     high=maxi
     while low<=high:
         mid=(low+high)//2
-        if possible(arr,mid,m,k):
+        if possible(arr,mid,k)==m:
             high=mid-1
         else:
             low=mid+1
     return low
-def possible(arr,mid,m,k):
+def possible(arr,mid,k):
     count=0
     b=0
     for i in range(len(arr)):
@@ -34,7 +34,7 @@ def possible(arr,mid,m,k):
             b+=(count//k)
             count=0
     b+=(count//k)
-    return b>=m  
+    return b 
 arr=nums = [7, 7, 7, 7, 13, 11, 12, 7]
 m = 2
 k = 3
