@@ -31,10 +31,11 @@
 # 2nd day: 2
 # 3rd day: 3
 # 4th day: 1, 1
-import math
+
+
 def capacity(arr,days):
-    low=max(arr)
-    high=sum(arr)
+    low=maxi(arr)
+    high=summ(arr)
     while low<=high:
         mid=(low+high)//2
         noofdays=fun(arr,mid)
@@ -43,6 +44,20 @@ def capacity(arr,days):
         else:
             low=mid+1
     return low
+
+def maxi(arr):
+    maxi=0
+    for i in range(len(arr)):
+        if arr[i]>maxi:
+            maxi=arr[i]
+    return maxi
+
+def summ(arr):
+    summ=0
+    for i in range(len(arr)):
+        summ+=arr[i]
+    return summ
+
 def fun(arr,mid):
     days=1
     load=0
@@ -53,7 +68,8 @@ def fun(arr,mid):
         else:
             load+=arr[i]
     return days
-arr=[1,2,3,4,5,6,7,8,9,10,11,12]
-days=5
+
+arr=[1,2,3,1,1]
+days=4
 result=capacity(arr,days)
 print(result)
