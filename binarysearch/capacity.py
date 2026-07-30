@@ -38,8 +38,7 @@ def capacity(arr,days):
     high=summ(arr)
     while low<=high:
         mid=(low+high)//2
-        noofdays=fun(arr,mid)
-        if noofdays<= days:
+        if fun(arr,mid)<= days:
             high=mid-1
         else:
             low=mid+1
