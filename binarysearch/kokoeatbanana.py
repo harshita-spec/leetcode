@@ -33,7 +33,7 @@ print(result)
 def bs(arr,h):
     low=1
     ans=float('inf')
-    high=hmax(arr)
+    high=max(arr)
     while low<=high:
         mid=(low+high)//2
         thr=fun(arr,mid)
@@ -43,12 +43,12 @@ def bs(arr,h):
         else:
             low=mid+1
     return ans
-def hmax(arr):
-    maxi=0
-    n=len(arr)
-    for i in range(n):
-        maxi=max(maxi,arr[i])
-    return maxi
+# def hmax(arr):
+#     maxi=0
+#     n=len(arr)
+#     for i in range(n):
+#         maxi=max(maxi,arr[i])
+#     return maxi
 def fun(arr,hr):
     thr=0
     for i in arr:
