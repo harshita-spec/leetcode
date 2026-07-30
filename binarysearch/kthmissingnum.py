@@ -11,10 +11,10 @@
 # Input: arr = [1,2,3,4], k = 2
 # Output: 6
 # Explanation: The missing positive integers are [5,6,7,...]. The 2nd missing positive integer is 6.
+
 def f(arr,k):
-    n=len(arr)
     low=0
-    high=n-1
+    high=len(arr)-1
     while low<=high:
         mid=(low+high)//2
         missing=arr[mid]-(mid+1)
@@ -22,7 +22,7 @@ def f(arr,k):
             low=mid+1
         else:
             high=mid-1
-    return high+1+k
+    return low+k
 arr=[1,2,3,4,7,11,13,14,15,16,17,18,19,20]
 k=6
 result=f(arr,k)
