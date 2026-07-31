@@ -9,6 +9,14 @@
 # Output: 5
 # Explanation: The maximum possible minimum distance between any two cows will be 5 when 2 cows are placed at positions [1, 6]. 
 
+def aggrcow(arr,cows):
+    arr=sorted(arr)
+    for i in range(max(arr)-min(arr)+1):
+        if cwp(arr,i,cows)==True:
+            continue
+        else:
+            return i-1
+        
 def cow(arr,cows):
     arr=sorted(arr)
     low=0
@@ -22,6 +30,7 @@ def cow(arr,cows):
         else:
             high=mid-1
     return ans
+
 def cwp(arr,dist,cows):
     cntcow=1
     last=arr[0]
@@ -32,7 +41,9 @@ def cwp(arr,dist,cows):
     if cntcow>=cows:
         return True
     return False
+
 arr=[0, 3, 4, 7, 10, 9]
 cows=4
+print(aggrcow(arr,cows))
 result=cow(arr,cows)
 print(result)
