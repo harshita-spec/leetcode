@@ -13,7 +13,7 @@ def cow(arr,cows):
     arr=sorted(arr)
     low=0
     n=len(arr)
-    high=arr[n-1]-arr[0]
+    high=arr[n-1]
     while low<=high:
         mid=(low+high)//2
         if (cwp(arr,mid,cows)==True):
@@ -32,7 +32,7 @@ def cwp(arr,dist,cows):
     if cntcow>=cows:
         return True
     return False
-arr=[4, 2, 1, 3, 6]
-cows=2
+arr=[0, 3, 4, 7, 10, 9]
+cows=4
 result=cow(arr,cows)
 print(result)
