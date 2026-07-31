@@ -15,7 +15,7 @@ def allocate(arr,m):
     if m>len(arr):
         return -1
     low=max(arr)
-    high=sum(arr)
+    high=summ(arr)
     while low<=high:
         mid=(low+high)//2
         if (fun(arr,mid)<=m):
@@ -23,6 +23,13 @@ def allocate(arr,m):
         else:
             low=mid+1
     return low
+
+def summ(arr):
+    summ=0
+    for i in range(len(arr)):
+        summ+=arr[i]
+    return summ
+
 def fun(arr,mid):
     stu=1
     pagestu=0
@@ -33,7 +40,7 @@ def fun(arr,mid):
             stu+=1
             pagestu=arr[i]
     return stu
-arr=[25, 46, 28, 49, 24, 71]
+arr=[25, 46, 28, 49, 24]
 m=4
 result=allocate(arr,m)
 print(result)
