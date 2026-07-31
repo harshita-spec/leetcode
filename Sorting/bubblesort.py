@@ -21,8 +21,8 @@ def bubblee(arr):
         for j in range(i):
             if arr[j]>arr[j+1]:
                 arr[j],arr[j+1]=arr[j+1],arr[j]
-                didswap=0
-        if didswap==1:
+                didswap=1
+        if didswap==0:
             break
     return arr
 arr=[13,24,45,23,5,89,9]
