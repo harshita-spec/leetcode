@@ -14,3 +14,16 @@ def bubble(arr):
     return arr
 arr=[13,24,45,23,5,89,9]
 print(bubble(arr))
+
+def bubblee(arr):
+    for i in range(len(arr)-1,-1,-1):
+        didswap=0
+        for j in range(i):
+            if arr[j]>arr[j+1]:
+                arr[j],arr[j+1]=arr[j+1],arr[j]
+                didswap=0
+        if didswap==1:
+            break
+    return arr
+arr=[13,24,45,23,5,89,9]
+print(bubblee(arr))
