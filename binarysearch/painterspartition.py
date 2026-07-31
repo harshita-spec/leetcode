@@ -21,7 +21,7 @@
 # Max time = max(1, 8, 11, 3) = 11
 # Return 11 % 10000003 = 11
 
-import math
+# import math
 def painterpartition(arr,m):
     if m>len(arr):
         return -1
