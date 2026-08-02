@@ -36,7 +36,7 @@ def sumofd(arr,mid):
     for i in range(len(arr)):
         sum +=math.ceil(arr[i]/mid)
     return sum
-arr=[1, 2, 3, 4, 5]
+arr=[1, 2, 3, 4, 5, 6]
 t=8
 result=divisor(arr,t)
 print(result)
