@@ -40,4 +40,28 @@ def kthElement(a, b, m, n, k):
 a = [2, 3, 6, 7, 9]
 b = [1, 4, 8, 10,12]
 print(kthElement(a, b, len(a), len(b), 7))
-        
+
+
+
+# brute approach
+def kthelement(a, b, m, n, k):
+    ans = []
+    i = 0
+    j = 0
+    while i < m and j < n:
+        if a[i] < b[j]:
+            ans.append(a[i])
+            i += 1
+        else:
+            ans.append(b[j])
+            j += 1
+    while i < m:
+        ans.append(a[i])
+        i += 1
+    while j < n:
+        ans.append(b[j])
+        j += 1
+    return ans[k - 1]
+a = [2, 3, 6, 7, 9]
+b = [1, 4, 8, 10,12]
+print(kthelement(a, b, len(a), len(b), 7))
