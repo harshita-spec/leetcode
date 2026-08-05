@@ -36,7 +36,6 @@ def lb(arr,target):
     while low<=high:
         mid=(low+high)//2
         if arr[mid]>=target:
-            ans=mid
             high=mid-1
         else:
             low=mid+1
