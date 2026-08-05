@@ -10,7 +10,29 @@
 # Input: arr1 = [2, 4, 6], arr2 = [1, 3]
 # Output: 3.0
 # Explanation: The array after merging arr1 and arr2 will be [ 1, 2, 3, 4, 6 ]. The median is simply 3.
-
+def med(a,b):
+    ans=[]
+    i=0
+    j=0
+    while i <len(a) and j<len(b):
+        if a[i]<b[j]:
+            ans.append(a[i])
+            i+=1
+        else:
+            ans.append(b[j])
+            j+=1
+    while i<len(a):
+        ans.append(a[i])
+        i+=1
+    while j<len(b):
+        ans.append(b[j])
+        j+=1
+    n=len(ans)
+    if n%2==0:
+        return (ans[n//2]+ans[n//2-1])/2.0
+    else:
+        return ans[n//2]
+    
 def median(a,b):
     n1=len(a)
     n2=len(b)
@@ -47,5 +69,6 @@ def median(a,b):
 
 a=[2, 4, 6]
 b=[1, 3, 5]
+print(med(a,b))
 result=median(a,b)
 print(result)
