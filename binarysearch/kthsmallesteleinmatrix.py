@@ -39,6 +39,6 @@ def bs(matrix,mid):
                 row -= 1
         return count
 
-matrix = [[1,5,9],[10,11,13],[12,13,15]]
-k = 8
+matrix = [[-5]]
+k = 1
 print(kthSmallest(matrix, k))
