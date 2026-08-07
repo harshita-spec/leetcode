@@ -26,6 +26,6 @@ def search(matrix,target):
             high=mid-1
     return False
 mat = [ [1, 2, 4], [6, 7, 8], [9, 10, 34] ]
-target = 78
+target = 8
 result=search(mat,target)
 print(result)
