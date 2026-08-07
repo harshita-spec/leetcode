@@ -9,6 +9,22 @@
 # Output: 3
 # Explanation: If we find the linear sorted array, the array becomes 1 1 2 2 3 3 4 5 8. So, median = 3
 
+# brute force
+def median(matrix):
+    ls=[]
+    for i in range(len(matrix)):
+        for j in range(len(matrix[0])):
+            ls.append(matrix[i][j])
+    ls.sort()
+    n=len(ls)
+    if n%2==0:
+        return (ls[n//2]+ls[n//2-1])/2.0
+    else:       
+        return ls[n//2]
+matrix=[[1, 3, 8],[2, 3, 4],[1, 2, 5]] 
+print(median(matrix))
+
+
 def findMedian(matrix):
     n = len(matrix)
     m = len(matrix[0])
