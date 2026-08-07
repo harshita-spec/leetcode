@@ -17,11 +17,8 @@ def median(matrix):
             ls.append(matrix[i][j])
     ls.sort()
     n=len(ls)
-    if n%2==0:
-        return (ls[n//2]+ls[n//2-1])/2.0
-    else:       
-        return ls[n//2]
-matrix=[[1, 3, 8],[2, 3, 4],[1, 2, 5]] 
+    return ls[n//2]
+matrix=[[1, 4, 9],[2, 5, 6],[3, 7, 8]] 
 print(median(matrix))
 
 
