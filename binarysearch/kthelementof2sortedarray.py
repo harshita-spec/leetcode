@@ -62,6 +62,6 @@ def kthelement(a, b, m, n, k):
         ans.append(b[j])
         j += 1
     return ans[k - 1]
-a = [2, 3, 6, 7, 9]
-b = [1, 4, 8, 10,12]
+a = [100, 112, 256, 349, 770]
+b = [72, 86, 113, 119, 265, 445, 892]
 print(kthelement(a, b, len(a), len(b), 7))
